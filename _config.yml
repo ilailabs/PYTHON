@@ -1,2 +1,2 @@
 theme: jekyll-theme-minimal
-source: --source python/build/html
+source: --source _build/html/

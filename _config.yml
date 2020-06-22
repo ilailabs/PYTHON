@@ -1,2 +1,2 @@
 theme: jekyll-theme-minimal
-source: --source /build/index.html
+source: --source /build/html/index.html

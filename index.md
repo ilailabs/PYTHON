@@ -1,14 +1,19 @@
 ## My Python Documentation
 
->Retrival is how you learn
+###Foundation
 
-**Foundation**
-[BasicSyntax](docs/print.md.html)
-[PrintFunction](basic/print_strings.py)
+<br>[PrintFunction](docs/print.md.html)
+<br>[PrintFunction](basics/print_strings.py)
 
-**Research**
+###Research
 
-**Leetcode**
+<br>[editMass](docs/editTextFile.md)
+<br>[editMass2](docs/editTextFile.md.html)
+<br>[PrintFunction](basic/print_strings.py)
 
+###Leetcode
 
-
+[Planner]()
+|Topic|Easy|Medium|Hard|
+|:---|:--:|:--:|:--:|
+|a   |b   |c   |d   |

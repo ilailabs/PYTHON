@@ -1,15 +1,15 @@
-## My Python Documentation
-
 >"retrival is how you learn"
+
+## My Python Documentation
 
 **Foundation**
 
-<br>[PrintFunction](docs/print.md.html)
+<br>[BasicSyntax](docs/basicSyntaxes.md.html)
 <br>[PrintFunction](basics/print_strings.py)
 
 **Research**
 
-[BasicSyntax](docs/print.md.html)
+
 [PrintFunction](basics/print_strings.py)
 
 <br>[editMass](docs/editTextFile.md)
@@ -28,3 +28,5 @@
 |Topic|Easy|Medium|Hard|
 |:---|:--:|:--:|:--:|
 |a   |b   |c   |d   |
+
+

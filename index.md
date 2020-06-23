@@ -1,11 +1,13 @@
-# My Python Documentation
+## My Python Documentation
 
-###Foundation
+>"retrival is how you learn"
+
+**Foundation**
 
 <br>[PrintFunction](docs/print.md.html)
 <br>[PrintFunction](basics/print_strings.py)
 
-###Research
+**Research**
 
 [BasicSyntax](docs/print.md.html)
 [PrintFunction](basics/print_strings.py)
@@ -15,13 +17,11 @@
 
 [PrintFunction](basic/print_strings.py)
 
-###Leetcode
+**Leetcode**
 
 <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)
 <br>[PrintFunction](basic/print_strings.py)
-
-###Leetcode
 
 [Planner]()
 

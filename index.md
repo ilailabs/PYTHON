@@ -4,29 +4,28 @@
 
 **Foundation**
 
-<br>[BasicSyntax](docs/basicSyntaxes.md.html)
-<br>[PrintFunction](basics/print_strings.py)
+<br>[Basic_Syntax](docs/basicSyntaxes.md.html)
+<br>[Class_In_Python](docs/class.md.html)
 
 **Research**
 
 
-[PrintFunction](basics/print_strings.py)
+<!-- [PrintFunction](basics/print_strings.py)
 
 <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)
 
-[PrintFunction](basic/print_strings.py)
+[PrintFunction](basic/print_strings.py) -->
 
 **Leetcode**
 
-<br>[editMass](docs/editTextFile.md)
+<!-- <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)
-<br>[PrintFunction](basic/print_strings.py)
+<br>[PrintFunction](basic/print_strings.py) -->
 
 [Planner]()
 
-|Topic|Easy|Medium|Hard|
-|:---|:--:|:--:|:--:|
-|a   |b   |c   |d   |
-
-
+|Problem                        |Topic           |Difficulty       |
+|:---                           |:--:            |:--:             |
+|[Increasing Order Search Tree](leet/e897.md.html)|Binary Search Tree|1|
+|   |   |   |

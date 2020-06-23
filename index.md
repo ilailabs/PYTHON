@@ -1,31 +1,21 @@
-## My Python Documentation
+# My Python Documentation
 
-<<<<<<< HEAD
 ###Foundation
 
 <br>[PrintFunction](docs/print.md.html)
 <br>[PrintFunction](basics/print_strings.py)
 
 ###Research
-=======
-**Foundation**
-[BasicSyntax](docs/print.md.html)
-<<<<<<< HEAD
-[PrintFunction](basics/print_strings.py)
 
-**Research**
+[BasicSyntax](docs/print.md.html)
+[PrintFunction](basics/print_strings.py)
 
 <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)
 
-=======
 [PrintFunction](basic/print_strings.py)
 
-**Research**
-
->>>>>>> 7d18ac48fcdcf9dbaabbc0483fe18bf3bc69ed5f
-**Leetcode**
->>>>>>> f0b01ab27588f2e6085899335a3f1dcc31d7d55d
+###Leetcode
 
 <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)
@@ -34,6 +24,7 @@
 ###Leetcode
 
 [Planner]()
+
 |Topic|Easy|Medium|Hard|
 |:---|:--:|:--:|:--:|
 |a   |b   |c   |d   |

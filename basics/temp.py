@@ -1,17 +1,12 @@
-import random
-#python module which has many functions like randint()
-i=random.randint(1,10)
+class MyClass:
+ def __init__(self, name, age): #this is method
+  self.name = name #this is property
+  self.age = age
 
-import random as rnd 
-#importing a module with nick name
-j=rnd.randint(1,2)
-print(j)
+ def newMethod(self):
+  print("you are doing amazing, "+self.name)
 
-import math as mathModule 
-print(mathModule.sqrt(5))
+nObj = MyClass("ilangovan",25)
 
-from math import pi, sqrt
-#imporing only specifed constans and functions instead of all
-
-print(pi)
-print(sqrt(3))
+nObj.name = "Elangovan"
+nObj.newMethod()

@@ -2,6 +2,8 @@
 
 ## My Python Documentation
 
+Contributor: Elankovan M. Gopal(elankovanmg@gmail.com)
+
 <u>**Foundation**</u>
 
 <br>[Basic_Syntax](docs/basicSyntaxes.md.html)

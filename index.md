@@ -2,12 +2,12 @@
 
 ## My Python Documentation
 
-**Foundation**
+<u>**Foundation**</u>
 
 <br>[Basic_Syntax](docs/basicSyntaxes.md.html)
 <br>[Class_In_Python](docs/class.md.html)
 
-**Research**
+<u>**Research**</u>
 
 
 <!-- [PrintFunction](basics/print_strings.py)
@@ -17,7 +17,7 @@
 
 [PrintFunction](basic/print_strings.py) -->
 
-**Leetcode**
+<u>**Leetcode**</u>
 
 <!-- <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)

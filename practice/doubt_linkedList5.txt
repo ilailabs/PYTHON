@@ -1,0 +1,35 @@
+class Node:
+ def __init__(self, val=None):
+  self.val = val
+  self.next = None
+
+class LinkedList:
+ def __init__(self):
+  self.head = None
+
+ def printList(self):
+  temp = self.head 
+  while(temp):
+   print(temp.val)
+   temp=temp.next
+
+ def addBegin(self):
+  node1 = self.head
+  #print(node1.val)
+  #print(node1.next)
+  self.head.val="sun"
+  self.head.next = node1
+
+##WHY "sun" is being printed infintely. I didn't expect this
+
+llist = LinkedList()
+llist.head=Node("mon")
+
+e3 = Node("wed")
+
+e2 = Node("tue")
+e2.next = e3
+llist.head.next = e2
+
+llist.addBegin()
+llist.printList()

@@ -6,18 +6,12 @@ class Node:
 class LinkedList:
  def __init__(self):
   self.head = None
- def printList(self):
-  temp = self.head
-  while(temp):
-   print(temp.val)
-   temp = temp.next
 
 llist = LinkedList()
 llist.head = Node("mon")
 
-e4 = Node("thur")
 e3 = Node("wed")
-e3.next = e4
+e3.next = None
 e2 = Node("tue")
 e2.next = e3
 

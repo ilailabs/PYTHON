@@ -9,6 +9,10 @@ Contributor: Elankovan M. Gopal(elankovanmg@gmail.com)
 <br>[Basic_Syntax](docs/basicSyntaxes.md.html)
 <br>[Class_In_Python](docs/class.md.html)
 
+<u>**Data Sructures**</u>
+
+<br>[Linked List](docs/linkedList.md.html)
+
 <u>**Research**</u>
 
 

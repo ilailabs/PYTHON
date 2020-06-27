@@ -6,8 +6,8 @@ Contributor: Elankovan M. Gopal(elankovanmg@gmail.com)
 
 <u>**Foundation**</u>
 
-<br>[Basic_Syntax](docs/basicSyntaxes.md.html)
-<br>[Class_In_Python](docs/class.md.html)
+<br>[Basic Syntax](docs/basicSyntaxes.md.html)
+<br>[Class](docs/class.md.html)
 
 <u>**Data Sructures**</u>
 

@@ -1,19 +1,19 @@
 >"retrival is how you learn"
 
-## My Python Documentation
+# MY PYTHON DOCUMENTATION
 
 Contributor: Elankovan M. Gopal(elankovanmg@gmail.com)
 
-###Foundation
+##Foundation
 
 <br>[Basic Syntax](docs/basicSyntaxes.md.html)
 <br>[Class](docs/class.md.html)
 
-###Data Sructures
+##Data Sructures
 
 <br>[Linked List](docs/linkedList.md.html)
 
-###Research
+##Research
 
 
 <!-- [PrintFunction](basics/print_strings.py)
@@ -23,7 +23,7 @@ Contributor: Elankovan M. Gopal(elankovanmg@gmail.com)
 
 [PrintFunction](basic/print_strings.py) -->
 
-###Leetcode
+##Leetcode
 
 <!-- <br>[editMass](docs/editTextFile.md)
 <br>[editMass2](docs/editTextFile.md.html)

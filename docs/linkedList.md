@@ -4,14 +4,13 @@
 2. [Traverse a linked list and print elements of the list](#2)
 3. [Insert `"sun"` at the begining](#3)
 4. [Insert `"fri"` at the end](#4)
-3. [Add element `"thur"` in b/w the nodes]()
-4. [Insert an element `"fri"` next to `"thur"`]()
-5. [Now replace the element `"thur"` by `"thu"`]()
-6. [Count the number of elements in the linked list]()
-7. [Search an element in a linked list]()
-5. [Link the start-end nodes, form a circular linked list]()
-6. [Search an element in the circular liked list]()
-7. [Insert an element at random position and count the list]()
+3. [Add element `"thur"` in b/w the nodes](#5)
+5. [Now replace the element `"thur"` by `"thu"`]
+6. [Count the number of elements in the linked list]
+7. [Search an element in a linked list]
+5. [Link the start-end nodes, form a circular linked list]
+6. [Search an element in the circular liked list]
+7. [Insert an element at random position and count the list]
 
 [**linkedList()**](#1) [:file_folder:](../dataStr/linkedList_a.py)
 <a name="1"></a>
@@ -100,3 +99,12 @@ llist.atEnd("fri")
 ```
 
 [**Insertion in b/w the nodes**](#5) [:file_folder:](../dataStr/linkedList_f.py)
+```python
+ def inBetween(self, inode, data):
+  ei = Node(data)
+  ei.next = inode.next
+  inode.next = ei
+```
+```python
+llist.inBetween(e3, "thur")
+```

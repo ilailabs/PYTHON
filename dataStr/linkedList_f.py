@@ -32,6 +32,11 @@ class LinkedList:
    temp = temp.next
   temp.next = en
 
+ def inBetween(self, inode, data):
+  ei = Node(data)
+  ei.next = inode.next 
+  inode.next = ei
+
 
 llist = LinkedList()
 llist.head = Node("mon")
@@ -43,13 +48,18 @@ e2.next = e3
 
 llist.head.next = e2
 
+llist.atEnd("thur")
+
+llist.inBetween(e2, "dummy")
+
 print("before...")
 llist.printList()
 
-llist.atEnd("thur")
 
 print("after...")
 llist.printList()
+
+
 
 #NOTE:do not include `head` in def
 #NOTE:`temp.head` include first element

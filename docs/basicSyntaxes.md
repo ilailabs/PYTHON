@@ -31,6 +31,11 @@ print("Please! "*100)
 
 [if()]()
 --------
+```Python
+if(True):
+  print("condition is true")
+```
+
 ```python
 def isEven(a):
  if(a%2==0):

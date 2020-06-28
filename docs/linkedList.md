@@ -108,3 +108,7 @@ llist.atEnd("fri")
 ```python
 llist.inBetween(e3, "thur")
 ```
+
+## Further readings 
+
+[Tutorials point python linked list](https://www.tutorialspoint.com/python_data_structure/python_linked_lists.htm)

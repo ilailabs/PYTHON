@@ -42,14 +42,15 @@ if(myMood=="happy"):
   print("I'm so happy :)")
 else:
   print("I'm confused!")
+
 ```
 
 ```python
 def isEven(a):
  if(a%2==0):
-  return True
+  print("yes, it's even number")
  else:
-  return False
+  print("no, it's odd number")
 
 a=input("ip::a=")
 isEven(a)

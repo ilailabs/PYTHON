@@ -34,6 +34,8 @@ print("Please! "*100)
 ```Python
 if(True):
   print("condition is true")
+  #if condition is true;the above line will be executed;
+  #change the condition to False and try
 ```
 
 ```python

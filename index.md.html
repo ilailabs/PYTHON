@@ -1,133 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html data-markdown-preview-plus-context="html-export">
   <head>
     <meta charset="utf-8" />
     <title>index.md</title>
-    <style>body { padding: 0; margin: 0; }
-.markdown-preview-plus-view:not([data-use-github-style]) {
-  padding: 2em;
-  font-size: 1.2em;
-  color: #383a42;
-  background-color: #fafafa;
+    <style>@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thin-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) span.critic.comment > span {
-  background-color: #fafafa;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thinitalic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) h1,
-.markdown-preview-plus-view:not([data-use-github-style]) h2,
-.markdown-preview-plus-view:not([data-use-github-style]) h3,
-.markdown-preview-plus-view:not([data-use-github-style]) h4,
-.markdown-preview-plus-view:not([data-use-github-style]) h5,
-.markdown-preview-plus-view:not([data-use-github-style]) h6 {
-  line-height: 1.2;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  color: #000000;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) h1 {
-  font-size: 2.4em;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-light-webfont.woff2') format('woff2');
   font-weight: 300;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) h2 {
-  font-size: 1.8em;
-  font-weight: 400;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) h3 {
-  font-size: 1.5em;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2');
   font-weight: 500;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) h4 {
-  font-size: 1.2em;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2');
   font-weight: 600;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) h5 {
-  font-size: 1.1em;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2');
   font-weight: 600;
+  font-style: italic;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) h6 {
-  font-size: 1em;
-  font-weight: 600;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) strong {
-  color: #000000;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) del {
-  color: #5e616e;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) a,
-.markdown-preview-plus-view:not([data-use-github-style]) a code {
-  color: #526fff;
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-blackitalic-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) img {
-  max-width: 100%;
+@font-face {
+  font-family: 'roboto_condensedlight';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) > p {
-  margin-top: 0;
-  margin-bottom: 1.5em;
+@font-face {
+  font-family: 'roboto_condensedlight_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) > ul,
-.markdown-preview-plus-view:not([data-use-github-style]) > ol {
-  margin-bottom: 1.5em;
+@font-face {
+  font-family: 'roboto_condenseditalic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) blockquote {
-  margin: 1.5em 0;
-  font-size: inherit;
-  color: #5e616e;
-  border-color: #d1d1d2;
-  border-width: 4px;
+@font-face {
+  font-family: 'roboto_condensedregular';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) hr {
-  margin: 3em 0;
-  border-top: 2px dashed #d1d1d2;
-  background: none;
+@font-face {
+  font-family: 'roboto_condensedbold';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) table {
-  margin: 1.5em 0;
+@font-face {
+  font-family: 'roboto_condensedbold_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: condensed;
 }
-.markdown-preview-plus-view:not([data-use-github-style]) th {
-  color: #000000;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) th,
-.markdown-preview-plus-view:not([data-use-github-style]) td {
-  padding: 0.66em 1em;
-  border: 1px solid #d1d1d2;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) pre,
-.markdown-preview-plus-view:not([data-use-github-style]) code {
-  color: #000000;
-  background-color: #eaeaeb;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) pre,
-.markdown-preview-plus-view:not([data-use-github-style]) pre.editor-colors {
-  margin: 1.5em 0;
-  padding: 1em;
-  font-size: 0.92em;
-  border-radius: 3px;
-  background-color: #f0f0f0;
-}
-.markdown-preview-plus-view:not([data-use-github-style]) kbd {
-  color: #000000;
-  border: 1px solid #d1d1d2;
-  border-bottom: 2px solid #c1c1c2;
-  background-color: #eaeaeb;
-}
-
-@include 'style-variables';
-.markdown-preview-plus-view {
-  display: block;
-  overflow-x: hidden;
-}
-.markdown-preview-plus-view .emoji {
+.emoji {
   max-width: 1em !important;
 }
-.markdown-preview-plus-view del {
+del {
   text-decoration: none;
   position: relative;
 }
-.markdown-preview-plus-view del::after {
+del::after {
   border-bottom: 1px solid black;
   content: '';
   left: 0;
@@ -135,26 +132,26 @@
   right: 0;
   top: 50%;
 }
-.markdown-preview-plus-view ul.contains-task-list li.task-list-item {
+ul.contains-task-list li.task-list-item {
   position: relative;
   list-style-type: none;
 }
-.markdown-preview-plus-view ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
   position: absolute;
   transform: translateX(-100%);
-  width: 30px;
+  width: 3rem;
 }
-.markdown-preview-plus-view span.critic.comment {
+span.critic.comment {
   position: relative;
 }
-.markdown-preview-plus-view span.critic.comment::before {
+span.critic.comment::before {
   content: '\1f4ac';
   position: initial;
 }
-.markdown-preview-plus-view span.critic.comment > span {
+span.critic.comment > span {
   display: none;
 }
-.markdown-preview-plus-view span.critic.comment:hover > span {
+span.critic.comment:hover > span {
   display: initial;
   position: absolute;
   top: 100%;
@@ -164,7 +161,7 @@
   max-height: 4em;
   overflow: auto;
 }
-.markdown-preview-plus-view span.critic.comment:focus > span {
+span.critic.comment:focus > span {
   display: initial;
   text-decoration: underline;
   position: initial;
@@ -173,408 +170,121 @@
   border: initial;
   border-radius: initial;
 }
-
-body.markdown-preview-plus-view[data-use-github-style] {
-  overflow: initial !important;
-}
-.markdown-preview-plus-view[data-use-github-style] {
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
-  line-height: 1.6;
-  word-wrap: break-word;
-  padding: 30px;
-  font-size: 16px;
-  color: #333;
-  background-color: #fff;
-}
-.markdown-preview-plus-view[data-use-github-style] > *:first-child {
-  margin-top: 0 !important;
-}
-.markdown-preview-plus-view[data-use-github-style] > *:last-child {
-  margin-bottom: 0 !important;
-}
-.markdown-preview-plus-view[data-use-github-style] a:not([href]) {
-  color: inherit;
-  text-decoration: none;
-}
-.markdown-preview-plus-view[data-use-github-style] .absent {
-  color: #c00;
-}
-.markdown-preview-plus-view[data-use-github-style] .anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  padding-right: 6px;
-  padding-left: 30px;
-  margin-left: -30px;
-}
-.markdown-preview-plus-view[data-use-github-style] .anchor:focus {
-  outline: none;
-}
-.markdown-preview-plus-view[data-use-github-style] h1,
-.markdown-preview-plus-view[data-use-github-style] h2,
-.markdown-preview-plus-view[data-use-github-style] h3,
-.markdown-preview-plus-view[data-use-github-style] h4,
-.markdown-preview-plus-view[data-use-github-style] h5,
-.markdown-preview-plus-view[data-use-github-style] h6 {
-  position: relative;
-  margin-top: 1em;
-  margin-bottom: 16px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-.markdown-preview-plus-view[data-use-github-style] h1 .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h2 .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h3 .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h4 .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h5 .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h6 .octicon-link {
-  display: none;
-  color: #000;
-  vertical-align: middle;
-}
-.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor,
-.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor,
-.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor,
-.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor,
-.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor,
-.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor {
-  padding-left: 8px;
-  margin-left: -30px;
-  text-decoration: none;
-}
-.markdown-preview-plus-view[data-use-github-style] h1:hover .anchor .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h2:hover .anchor .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h3:hover .anchor .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h4:hover .anchor .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h5:hover .anchor .octicon-link,
-.markdown-preview-plus-view[data-use-github-style] h6:hover .anchor .octicon-link {
-  display: inline-block;
-}
-.markdown-preview-plus-view[data-use-github-style] h1 tt,
-.markdown-preview-plus-view[data-use-github-style] h2 tt,
-.markdown-preview-plus-view[data-use-github-style] h3 tt,
-.markdown-preview-plus-view[data-use-github-style] h4 tt,
-.markdown-preview-plus-view[data-use-github-style] h5 tt,
-.markdown-preview-plus-view[data-use-github-style] h6 tt,
-.markdown-preview-plus-view[data-use-github-style] h1 code,
-.markdown-preview-plus-view[data-use-github-style] h2 code,
-.markdown-preview-plus-view[data-use-github-style] h3 code,
-.markdown-preview-plus-view[data-use-github-style] h4 code,
-.markdown-preview-plus-view[data-use-github-style] h5 code,
-.markdown-preview-plus-view[data-use-github-style] h6 code {
-  font-size: inherit;
-}
-.markdown-preview-plus-view[data-use-github-style] h1 {
-  padding-bottom: 0.3em;
-  font-size: 2.25em;
-  line-height: 1.2;
-  border-bottom: 1px solid #eee;
-}
-.markdown-preview-plus-view[data-use-github-style] h1 .anchor {
-  line-height: 1;
-}
-.markdown-preview-plus-view[data-use-github-style] h2 {
-  padding-bottom: 0.3em;
-  font-size: 1.75em;
-  line-height: 1.225;
-  border-bottom: 1px solid #eee;
-}
-.markdown-preview-plus-view[data-use-github-style] h2 .anchor {
-  line-height: 1;
-}
-.markdown-preview-plus-view[data-use-github-style] h3 {
-  font-size: 1.5em;
-  line-height: 1.43;
-}
-.markdown-preview-plus-view[data-use-github-style] h3 .anchor {
-  line-height: 1.2;
-}
-.markdown-preview-plus-view[data-use-github-style] h4 {
-  font-size: 1.25em;
-}
-.markdown-preview-plus-view[data-use-github-style] h4 .anchor {
-  line-height: 1.2;
-}
-.markdown-preview-plus-view[data-use-github-style] h5 {
-  font-size: 1em;
-}
-.markdown-preview-plus-view[data-use-github-style] h5 .anchor {
-  line-height: 1.1;
-}
-.markdown-preview-plus-view[data-use-github-style] h6 {
-  font-size: 1em;
-  color: #777;
-}
-.markdown-preview-plus-view[data-use-github-style] h6 .anchor {
-  line-height: 1.1;
-}
-.markdown-preview-plus-view[data-use-github-style] p,
-.markdown-preview-plus-view[data-use-github-style] blockquote,
-.markdown-preview-plus-view[data-use-github-style] ul,
-.markdown-preview-plus-view[data-use-github-style] ol,
-.markdown-preview-plus-view[data-use-github-style] dl,
-.markdown-preview-plus-view[data-use-github-style] table,
-.markdown-preview-plus-view[data-use-github-style] pre {
-  margin-top: 0;
-  margin-bottom: 16px;
-}
-.markdown-preview-plus-view[data-use-github-style] hr {
-  height: 4px;
-  padding: 0;
-  margin: 16px 0;
-  background-color: #e7e7e7;
-  border: 0 none;
-}
-.markdown-preview-plus-view[data-use-github-style] ul,
-.markdown-preview-plus-view[data-use-github-style] ol {
-  padding-left: 2em;
-}
-.markdown-preview-plus-view[data-use-github-style] ul.no-list,
-.markdown-preview-plus-view[data-use-github-style] ol.no-list {
-  padding: 0;
-  list-style-type: none;
-}
-.markdown-preview-plus-view[data-use-github-style] ul ul,
-.markdown-preview-plus-view[data-use-github-style] ul ol,
-.markdown-preview-plus-view[data-use-github-style] ol ol,
-.markdown-preview-plus-view[data-use-github-style] ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.markdown-preview-plus-view[data-use-github-style] li > p {
-  margin-top: 16px;
-}
-.markdown-preview-plus-view[data-use-github-style] dl {
-  padding: 0;
-}
-.markdown-preview-plus-view[data-use-github-style] dl dt {
-  padding: 0;
-  margin-top: 16px;
-  font-size: 1em;
-  font-style: italic;
-  font-weight: bold;
-}
-.markdown-preview-plus-view[data-use-github-style] dl dd {
-  padding: 0 16px;
-  margin-bottom: 16px;
-}
-.markdown-preview-plus-view[data-use-github-style] blockquote {
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
-}
-.markdown-preview-plus-view[data-use-github-style] blockquote > :first-child {
-  margin-top: 0;
-}
-.markdown-preview-plus-view[data-use-github-style] blockquote > :last-child {
-  margin-bottom: 0;
-}
-.markdown-preview-plus-view[data-use-github-style] table {
-  display: block;
-  width: 100%;
-  overflow: auto;
-  word-break: normal;
-  word-break: keep-all;
-}
-.markdown-preview-plus-view[data-use-github-style] table th {
-  font-weight: bold;
-}
-.markdown-preview-plus-view[data-use-github-style] table th,
-.markdown-preview-plus-view[data-use-github-style] table td {
-  padding: 6px 13px;
-  border: 1px solid #ddd;
-}
-.markdown-preview-plus-view[data-use-github-style] table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-.markdown-preview-plus-view[data-use-github-style] table tr:nth-child(2n) {
-  background-color: #f8f8f8;
-}
-.markdown-preview-plus-view[data-use-github-style] img {
-  max-width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.markdown-preview-plus-view[data-use-github-style] .emoji {
-  max-width: none;
-}
-.markdown-preview-plus-view[data-use-github-style] span.frame {
-  display: block;
-  overflow: hidden;
-}
-.markdown-preview-plus-view[data-use-github-style] span.frame > span {
-  display: block;
-  float: left;
-  width: auto;
-  padding: 7px;
-  margin: 13px 0 0;
-  overflow: hidden;
-  border: 1px solid #ddd;
-}
-.markdown-preview-plus-view[data-use-github-style] span.frame span img {
-  display: block;
-  float: left;
-}
-.markdown-preview-plus-view[data-use-github-style] span.frame span span {
-  display: block;
-  padding: 5px 0 0;
-  clear: both;
-  color: #333;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-center {
-  display: block;
-  overflow: hidden;
-  clear: both;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-center > span {
-  display: block;
-  margin: 13px auto 0;
-  overflow: hidden;
-  text-align: center;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-center span img {
-  margin: 0 auto;
-  text-align: center;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-right {
-  display: block;
-  overflow: hidden;
-  clear: both;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-right > span {
-  display: block;
-  margin: 13px 0 0;
-  overflow: hidden;
-  text-align: right;
-}
-.markdown-preview-plus-view[data-use-github-style] span.align-right span img {
-  margin: 0;
-  text-align: right;
-}
-.markdown-preview-plus-view[data-use-github-style] span.float-left {
-  display: block;
-  float: left;
-  margin-right: 13px;
-  overflow: hidden;
-}
-.markdown-preview-plus-view[data-use-github-style] span.float-left span {
-  margin: 13px 0 0;
-}
-.markdown-preview-plus-view[data-use-github-style] span.float-right {
-  display: block;
-  float: right;
-  margin-left: 13px;
-  overflow: hidden;
-}
-.markdown-preview-plus-view[data-use-github-style] span.float-right > span {
-  display: block;
-  margin: 13px auto 0;
-  overflow: hidden;
-  text-align: right;
-}
-.markdown-preview-plus-view[data-use-github-style] code,
-.markdown-preview-plus-view[data-use-github-style] tt {
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0;
-  font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.04);
-  border-radius: 3px;
-}
-.markdown-preview-plus-view[data-use-github-style] code:before,
-.markdown-preview-plus-view[data-use-github-style] tt:before,
-.markdown-preview-plus-view[data-use-github-style] code:after,
-.markdown-preview-plus-view[data-use-github-style] tt:after {
-  letter-spacing: -0.2em;
-  content: "\00a0";
-}
-.markdown-preview-plus-view[data-use-github-style] code br,
-.markdown-preview-plus-view[data-use-github-style] tt br {
-  display: none;
-}
-.markdown-preview-plus-view[data-use-github-style] del code {
-  text-decoration: inherit;
-}
-.markdown-preview-plus-view[data-use-github-style] pre > code {
-  padding: 0;
-  margin: 0;
-  font-size: 100%;
-  word-break: normal;
-  white-space: pre;
-  background: transparent;
-  border: 0;
-}
-.markdown-preview-plus-view[data-use-github-style] .highlight {
-  margin-bottom: 16px;
-}
-.markdown-preview-plus-view[data-use-github-style] .highlight pre,
-.markdown-preview-plus-view[data-use-github-style] pre {
-  padding: 16px;
-  overflow: auto;
-  font-size: 85%;
-  line-height: 1.45;
-  background-color: #f7f7f7;
-  border-radius: 3px;
-}
-.markdown-preview-plus-view[data-use-github-style] .highlight pre {
-  margin-bottom: 0;
-  word-break: normal;
-}
-.markdown-preview-plus-view[data-use-github-style] pre {
-  word-wrap: normal;
-}
-.markdown-preview-plus-view[data-use-github-style] pre code,
-.markdown-preview-plus-view[data-use-github-style] pre tt {
-  display: inline;
-  max-width: initial;
-  padding: 0;
-  margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
   background-color: transparent;
-  border: 0;
 }
-.markdown-preview-plus-view[data-use-github-style] pre code:before,
-.markdown-preview-plus-view[data-use-github-style] pre tt:before,
-.markdown-preview-plus-view[data-use-github-style] pre code:after,
-.markdown-preview-plus-view[data-use-github-style] pre tt:after {
-  content: normal;
-}
-.markdown-preview-plus-view[data-use-github-style] kbd {
-  display: inline-block;
-  padding: 3px 5px;
-  font-size: 11px;
-  line-height: 10px;
-  color: #555;
-  vertical-align: middle;
-  background-color: #fcfcfc;
-  border: solid 1px #ccc;
-  border-bottom-color: #bbb;
-  border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #bbb;
-}
-.markdown-preview-plus-view[data-use-github-style] span.critic.comment > span {
-  background-color: #fff;
-}
-.markdown-preview-plus-view[data-use-github-style] a {
-  color: #337ab7;
-}
-.markdown-preview-plus-view[data-use-github-style] pre,
-.markdown-preview-plus-view[data-use-github-style] code {
-  color: inherit;
-}
-.markdown-preview-plus-view[data-use-github-style] pre,
-.markdown-preview-plus-view[data-use-github-style] pre.editor-colors {
-  padding: 0.8em 1em;
-  margin-bottom: 1em;
-  font-size: 0.85em;
-  border-radius: 4px;
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #383a42;
+  background-color: #fafafa;
   overflow: auto;
+}
+body > :first-child,
+body > div.update-preview > :first-child {
+  margin-top: 0;
+}
+body > p,
+body > div.update-preview > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+body > ul,
+body > div.update-preview > ul,
+body > ol,
+body > div.update-preview > ol {
+  margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+strong {
+  color: #000000;
+}
+del {
+  color: #5e616e;
+}
+a,
+a code {
+  color: #526fff;
+}
+img {
+  max-width: 100%;
+}
+blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #5e616e;
+  border-color: #d1d1d2;
+  border-width: 4px;
+}
+hr {
+  margin: 3em 0;
+  border-top: 2px dashed #d1d1d2;
+  background: none;
+}
+table {
+  margin: 1.5em 0;
+}
+th {
+  color: #000000;
+}
+th,
+td {
+  padding: 0.66em 1em;
+  border: 1px solid #d1d1d2;
+}
+code {
+  color: #000000;
+  background-color: #eaeaeb;
+}
+pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+kbd {
+  color: #000000;
+  border: 1px solid #d1d1d2;
+  border-bottom: 2px solid #c1c1c2;
+  background-color: #eaeaeb;
 }
 
 .bracket-matcher .region {
@@ -734,6 +444,10 @@ pre.editor-colors .fold-marker:after {
 }
 .syntax--string {
   color: #50a14f;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #383a42;
 }
 .syntax--string.syntax--regexp {
   color: #0184bc;
@@ -979,6 +693,12 @@ pre.editor-colors .fold-marker:after {
 .syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
   color: #a626a4;
 }
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
 .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
   color: #e45649;
 }
@@ -995,6 +715,43 @@ pre.editor-colors .fold-marker:after {
 .syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
   color: #0184bc;
 }
+.syntax--ng.syntax--interpolation {
+  color: #e45649;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #4078f2;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e45649;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #4078f2;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #986801;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #383a42;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #383a42;
+}
+.syntax--ng.syntax--tag {
+  color: #0184bc;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #c18401;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #a626a4;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #383a42;
+}
 .syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
   color: inherit;
 }
@@ -1010,32 +767,1308 @@ pre.editor-colors .fold-marker:after {
 </style>
 
   </head>
-  <body class="markdown-preview-plus-view">
-    <h2>My Python Documentation</h2>
-<h3>Foundation</h3>
-<p><br><a href="docs/print.md.html">PrintFunction</a>
-<br><a href="basics/print_strings.py">PrintFunction</a></p>
-<h3>Research</h3>
-<p><br><a href="docs/editTextFile.md">editMass</a>
-<br><a href="docs/editTextFile.md.html">editMass2</a>
-<br><a href="basic/print_strings.py">PrintFunction</a></p>
-<h3>Leetcode</h3>
-<p><a href="">Planner</a></p>
+  <body>
+    <blockquote>
+<p>“retrival is how you learn”</p>
+</blockquote>
+<h1>MY PYTHON DOCUMENTATION</h1>
+<p><em>Elankovan M. Gopal(<a href="mailto:elankovanmg@gmail.com">elankovanmg@gmail.com</a>)</em>.</p>
+<p>This document has been auto-generated using <a href="#autogenfile">writePythonNotes.py</a>; inteded to serve as my quick reference.</p>
+<p><a href="bash/index.md.html">Shell Scripts - HOME</a></p>
+<p><a href="java/index.md.html">Java Scripts - HOME</a></p>
+<p><strong>CONTENTS</strong></p>
+<ul>
+<li><a href="#tutorials">Tutorials</a></li>
+<li><a href="#trash">tutorials/trash</a></li>
+<li><a href="#dsalgo">Data Structures &amp; Algo</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#problems">Problems</a></li>
+</ul>
+<p><a name="tutorials"></a></p>
+<h2>Tutorials</h2>
+<p><br><a href="notes/basicSyntaxes.md.html">Basic Syntax</a>
+<br><a href="notes/class.md.html">Class</a></p>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">Topic</th>
-<th style="text-align:center">Easy</th>
-<th style="text-align:center">Medium</th>
-<th style="text-align:center">Hard</th>
+<th style="text-align:left">File Name</th>
+<th style="text-align:left">Function</th>
+<th style="text-align:center">Comments</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">a</td>
-<td style="text-align:center">b</td>
-<td style="text-align:center">c</td>
-<td style="text-align:center">d</td>
+<td style="text-align:left"><a href="tutorials/temp.py">temp.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/linkedList.py">linkedList.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/list_a.py">list_a.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/while.py">while.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/list_b.py">list_b.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/Dictionaries.py">Dictionaries.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/operator.py">operator.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/print.py">print.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/library.py">library.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/class.py">class.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">##example01##example02</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/userFunction.py">userFunction.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">##example1##example2##example3</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/binaryTree.py">binaryTree.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>tutorials/trash</strong>
+<a name="trash"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File Name</th>
+<th style="text-align:left">Function</th>
+<th style="text-align:center">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/operator_overloading.py">operator_overloading.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/reading_only_certain_portion_of_a_file.py">reading_only_certain_portion_of_a_file.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Finally.py">Finally.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/get_in_dict.py">get_in_dict.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/StringArray.py">StringArray.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/temp.py">temp.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/input_print.py">input_print.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/reading_files_line_by_line.py">reading_files_line_by_line.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/key_is_in_dict.py">key_is_in_dict.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/RandInt.py">RandInt.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/class_methods.py">class_methods.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/1_print.py">1_print.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/fucn_euqals_variable.py">fucn_euqals_variable.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/utri.py">utri.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/TryFinallyFiles.py">TryFinallyFiles.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/read_and_display_contents_of_the_file.py">read_and_display_contents_of_the_file.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/writting_in_a_file.py">writting_in_a_file.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/GetInputDict.py">GetInputDict.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/IfStatement.py">IfStatement.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FuncIndex.py">FuncIndex.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/download.py">download.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets_fp_b.py">Sets_fp_b.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/DefFucntion.py">DefFucntion.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/classes.py">classes.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/find.py">find.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/asort.py">asort.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/PureFunctions.py">PureFunctions.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/itertools_a.py">itertools_a.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets_c.py">Sets_c.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/itertools_eg.py">itertools_eg.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/etry.py">etry.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/pana.py">pana.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/print_strings.py">print_strings.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/DataStructures_notes.py">DataStructures_notes.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/sample.py">sample.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/fact.py">fact.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ForInList.py">ForInList.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/sim_calc.py">sim_calc.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/lists_.py">lists_.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/simple_networkx.py">simple_networkx.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ListComprehensions.py">ListComprehensions.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/magic_method_operator_overloading.py">magic_method_operator_overloading.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FileReread.py">FileReread.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">print(’##Reading…’)print(’##Re-reading…’)</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/PrintFileLineByLine.py">PrintFileLineByLine.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FuncInpArg.py">FuncInpArg.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/intro.py">intro.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">##multiple variable in one line</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/While.py">While.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_comprehensions.py">list_comprehensions.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/appendListFor.py">appendListFor.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_func_insert.py">list_func_insert.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_reasignments.py">list_reasignments.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/binary.py">binary.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/reading_files.py">reading_files.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/working_with_files.py">working_with_files.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/strip.py">strip.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/unknow_exception_handling.py">unknow_exception_handling.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/push.py">push.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/1_print_quo_rem.py">1_print_quo_rem.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/simplefor.py">simplefor.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/dict.py">dict.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/matrix.py">matrix.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_random.py">list_random.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">##this is dictionary</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/spiral.py">spiral.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/simpe_int.py">simpe_int.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/KeyIsInDict.py">KeyIsInDict.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/end-sort.py">end-sort.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Variables.py">Variables.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/imprt_in_diff_name.py">imprt_in_diff_name.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Rawip2List.py">Rawip2List.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ListReassignment.py">ListReassignment.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/numpy_arrays_samp.py">numpy_arrays_samp.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FunctionProgramming_quiz.py">FunctionProgramming_quiz.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/inheritance_d.py">inheritance_d.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/hello_world.py">hello_world.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/import_more_than_two_module.py">import_more_than_two_module.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/StringOperation.py">StringOperation.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/samp1.py">samp1.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/simple_if.py">simple_if.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ImportingModule.py">ImportingModule.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ImpureFunctions.py">ImpureFunctions.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/com2spc.py">com2spc.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/MaxMin.py">MaxMin.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Itertools.py">Itertools.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FuncAsFuncInput.py">FuncAsFuncInput.py</a></td>
+<td style="text-align:left">Print a word with an exclamation mark following it    print word+’!’</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Recursion_b_clarify.py">Recursion_b_clarify.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/join_str.py">join_str.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sorting.py">Sorting.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/DirectedGraph_basics.py">DirectedGraph_basics.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/def_func.py">def_func.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/class_attributes.py">class_attributes.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/remove3.py">remove3.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/counter.py">counter.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/new.py">new.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/WhileWithBreak.py">WhileWithBreak.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/dictioaries.py">dictioaries.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/IndendationError.py">IndendationError.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/WhileLoop.py">WhileLoop.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Strings.py">Strings.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/testcase.py">testcase.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/uppertri.py">uppertri.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_func_append.py">list_func_append.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/NamedFunction.py">NamedFunction.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_in_strings.py">list_in_strings.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/asg.py">asg.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/itertools_eg_clarify.py">itertools_eg_clarify.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets_b.py">Sets_b.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/many_exception_handling.py">many_exception_handling.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/DirectedGraphInPython.py">DirectedGraphInPython.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/itertools_c.py">itertools_c.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/math_plot.py">math_plot.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/float_to_int_type_conversion.py">float_to_int_type_conversion.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/exception_andling.py">exception_andling.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets.py">Sets.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/clipDuration.py">clipDuration.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/string_operation.py">string_operation.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FunctionEqualsVariable.py">FunctionEqualsVariable.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/DictFunc.py">DictFunc.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/yesorno.py">yesorno.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/SimplePrint.py">SimplePrint.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/import_module.py">import_module.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/copynote.py">copynote.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/dictionaries_adding_element.py">dictionaries_adding_element.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/opening_file_in_writemode_will_delete_its_content.py">opening_file_in_writemode_will_delete_its_content.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/opening_and_closing_a_file.py">opening_and_closing_a_file.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Recursion_fib.py">Recursion_fib.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/StoringString.py">StoringString.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Dictionaries.py">Dictionaries.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/agumending_list_and_repeat_list.py">agumending_list_and_repeat_list.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Classes_attrib_error.py">Classes_attrib_error.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/using_numpy.py">using_numpy.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/NamedFunctionAndLambda.py">NamedFunctionAndLambda.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/SemiPrime.py">SemiPrime.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/listAndTuple.py">listAndTuple.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/oop_inheritance_c.py">oop_inheritance_c.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/read.py">read.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/printing_line_by_line_in_for_loop.py">printing_line_by_line_in_for_loop.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets_fp_a.py">Sets_fp_a.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/try_finally_while_working_with_files.py">try_finally_while_working_with_files.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/spcl.py">spcl.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/concatenation.py">concatenation.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/test.py">test.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/sumFirstN.py">sumFirstN.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">##— for loop —###— while loop —##</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/func_with_inp_arg.py">func_with_inp_arg.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/inheritance_eg.py">inheritance_eg.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/sort.py">sort.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/simple_calculator.py">simple_calculator.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/func_as_func_input.py">func_as_func_input.py</a></td>
+<td style="text-align:left">Print a word with an exclamation mark following itself.    print(word+"!")</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/listFileNames.py">listFileNames.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Func2Func.py">Func2Func.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/func_to_a_func.py">func_to_a_func.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/user_fun.py">user_fun.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Float2Int.py">Float2Int.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/file_rereading_will_return_nothing.py">file_rereading_will_return_nothing.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/raise_exception.py">raise_exception.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/print_no_of_length_of_strings_in_a_file.py">print_no_of_length_of_strings_in_a_file.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/btemp.py">btemp.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/while_with_break.py">while_with_break.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/mysym.py">mysym.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/working_with_files_with_statement.py">working_with_files_with_statement.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Lambdas.py">Lambdas.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/OpenCloseFile.py">OpenCloseFile.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/inheritance_magic.py">inheritance_magic.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/magic_methods_operator_over.py">magic_methods_operator_over.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center">## Magic Methods</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/FuncAppend.py">FuncAppend.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/temp11.py">temp11.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/secvowel.py">secvowel.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/pagerank.py">pagerank.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_func_index.py">list_func_index.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/cheat.py">cheat.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/ExceptionHandling.py">ExceptionHandling.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/OpeningText.py">OpeningText.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/sortplay.py">sortplay.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/convert.py">convert.py</a></td>
+<td style="text-align:left">outputpath = os.path.splitext(inputpath)[0] + targetFormat</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/test1.py">test1.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/string_formating.py">string_formating.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/while_loop.py">while_loop.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/int2str.py">int2str.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Array.py">Array.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/InputFromUser.py">InputFromUser.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/SimpleCalculator.py">SimpleCalculator.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/StringConcatenation.py">StringConcatenation.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/Sets_fp.py">Sets_fp.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/1sort.py">1sort.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/EndSortSoln.py">EndSortSoln.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/buttons.py">buttons.py</a></td>
+<td style="text-align:left">=======</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/randi.py">randi.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/UnknowExceptionHandling.py">UnknowExceptionHandling.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/list_func_max_min_count_rev.py">list_func_max_min_count_rev.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="tutorials/trash/StringFormatting.py">StringFormatting.py</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<h2>Data Structures &amp; Algorithms</h2>
+<p><a name="dsalgo"></a></p>
+<p><br><a href="notes/linkedList.md.html">Linked List</a></p>
+<h2>Research</h2>
+<p><a name="research"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File Name</th>
+<th style="text-align:left">Function</th>
+<th style="text-align:center">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="research/PlotDispCsv.py">PlotDispCsv.py</a></td>
+<td style="text-align:left">calculates the position and displacemnt and make animation</td>
+<td style="text-align:center">##to calculate the position of atoms in all frames## Plot your results## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/writePythonNotes.py">writePythonNotes.py</a></td>
+<td style="text-align:left">Copies all the *.py file into *.md file with about information and comments; documentation purpose; Using this file i created “MY PYTHON DOCUMENTATION”		 about=about+next(fsrc)</td>
+<td style="text-align:center">if ‘##’ in line:         ## Writing to <a href="http://notes.md">notes.md</a> file; writng to a file## <a href="https://stackabuse.com/python-list-files-in-a-directory/">ref</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/PlotKeCsv.py">PlotKeCsv.py</a></td>
+<td style="text-align:left">plot ke vs position in csv file;</td>
+<td style="text-align:center">## to calculate the position, ke of atoms in all frames## PLOT YOUR RESULTS## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/exportfile_and_render_image.py">exportfile_and_render_image.py</a></td>
+<td style="text-align:left">this will read your dump and create last dump a seperate file and create animation.</td>
+<td style="text-align:center">## export_file(pipeline, “output.%i.dump” % i, frame=i)## uses the second argument as file ip</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/distance_bw_tow_particles_ovito.py">distance_bw_tow_particles_ovito.py</a></td>
+<td style="text-align:left">This script calculates distance bw partices of given position; importing global attributes into a text file;</td>
+<td style="text-align:center">## dist bw position 0 and position 2## <a href="http://forum.ovito.org/index.php?topic=360.0">ref</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/makegifdisp.py">makegifdisp.py</a></td>
+<td style="text-align:left">prints the postion and displacement in .csv file</td>
+<td style="text-align:center">##to calculate the position, disp, eng of all atoms;## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/export_particular_intervals_frames.py">export_particular_intervals_frames.py</a></td>
+<td style="text-align:left">Exports dump files into lmp files using <em>ovitos</em>;19-nov-19</td>
+<td style="text-align:center">## change frame numbers here</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/export_any_dump.py">export_any_dump.py</a></td>
+<td style="text-align:left">converts dump files into lmp files using ovitos; can convert all dump frames or particular choosen frames; oct-19;</td>
+<td style="text-align:center">## specify the frame numbers</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/editMass.py">editMass.py</a></td>
+<td style="text-align:left">Updated the mass of lmp file created from ovito python;oct-19</td>
+<td style="text-align:center">## specify mass here</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/dos_calc.py">dos_calc.py</a></td>
+<td style="text-align:left">Calculates density of states information from the velcity auto-corelation function from lammps simulation; june-20</td>
+<td style="text-align:center">## sub plots using <em>matplotlib</em>## Writing to csv file## printing dos of atom A## printing dos of atom B## printing dos of GB interface</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/plotvar.py">plotvar.py</a></td>
+<td style="text-align:left">to know the list of properties availabe; to collect particular particle property; printing in csv; specify the particle id;</td>
+<td style="text-align:center">## to know all the lis of particle properties <code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">list(data_collection.particle_properties.keys())</code>## Plot your results## to get the x component data alone give 0 for i; or 1 for y;2 for z in var_data[i][]## ploting…## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/pGrp.py">pGrp.py</a></td>
+<td style="text-align:left">calculates the position &amp; displacement of all atoms in the dump file (for all frames) and prints a *.csv file;20-nov-19</td>
+<td style="text-align:center">## to calculate the position of atoms in all frames	# ## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/makeDis.py">makeDis.py</a></td>
+<td style="text-align:left">ovito python make displacemnt vs position plot;9-aug-19;</td>
+<td style="text-align:center">## to calculate the position of atoms in all frames## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/makeTE.py">makeTE.py</a></td>
+<td style="text-align:left">calculates the total energy of all the column of atoms in each dump frames</td>
+<td style="text-align:center">## to calculate the tot ene of all the columns of atoms in all frames## specify the particle properties an “c_eng” and “c_kin”## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/data_single_gpulse.py">data_single_gpulse.py</a></td>
+<td style="text-align:left">gaussiam function to identify the pulse information</td>
+<td style="text-align:center">## matplotlib library## mumpy library</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/disp_of_atoms_all_frame.py">disp_of_atoms_all_frame.py</a></td>
+<td style="text-align:left">calculates the position and displacement of particular atom; specify the particle id;may-19</td>
+<td style="text-align:center">##to calculate the position of atoms in all frames## Plot your results## to get the x data alone; put 1 or 2 for y or z in x_position[i][]## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/newPlotDisp.py">newPlotDisp.py</a></td>
+<td style="text-align:left">Displacement of atoms wrt position; net displcements from x, y z components; oct-19</td>
+<td style="text-align:center">## to calculate the position &amp; equivalent disp of atoms in all frames</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/dump2lmp.py">dump2lmp.py</a></td>
+<td style="text-align:left">converts the dump file with N number of frames to N number of seperate lmp files; used for finding the GB Min Structure using anhealing technique;</td>
+<td style="text-align:center">## writing a text file from series of strings</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/analyse_gb_str.py">analyse_gb_str.py</a></td>
+<td style="text-align:left">this function analyses the grain boundary structure and calculates the grain boundary thickness, Gb atomic density, area, etc…</td>
+<td style="text-align:center">## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/export_particular_frames.py">export_particular_frames.py</a></td>
+<td style="text-align:left">exports the dump data for particular frames using ovito python</td>
+<td style="text-align:center">## writing lmp file using ovitos</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/readLogFile_gbe.py">readLogFile_gbe.py</a></td>
+<td style="text-align:left">reads the set of log files and extracts the GBE data from a particular line</td>
+<td style="text-align:center">## GBE; edit this line## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/PosDisp.py">PosDisp.py</a></td>
+<td style="text-align:left">Plot the position vs disp; plot position vs c_eng</td>
+<td style="text-align:center">## to calculate the position of atoms in all frames		## this has the position data of <em>particle_id</em> x y z;access x[1][1]</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/readLogfiles.py">readLogfiles.py</a></td>
+<td style="text-align:left">this reads the logfile and extracts the value of the variable “PE” and prints the resutls in a seprate *.csv file; nov-19;</td>
+<td style="text-align:center">## reads the file line upto this string## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/waveAnim.py">waveAnim.py</a></td>
+<td style="text-align:left">creates a wave animation from reading the dump file displacement data; prints the sequance of *.png images; aug-19</td>
+<td style="text-align:center">##to calculate the position of atoms in all frames	## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/rendergbp_dump.py">rendergbp_dump.py</a></td>
+<td style="text-align:left">this will read your dump and create last dump a seperate file and create animation. Useing tachyonrenderer, openGBrenderer; using pileline object; feb-19;</td>
+<td style="text-align:center">## using object</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/TimeDispCsv.py">TimeDispCsv.py</a></td>
+<td style="text-align:left">time-vs-disp from dump file;30-aug-19</td>
+<td style="text-align:center">## python inline arguments## Plot your resutls## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/v1plotdisp.py">v1plotdisp.py</a></td>
+<td style="text-align:left">calculate the position of specific atoms in particular frame; displacement of one atom; particle data of one atom;</td>
+<td style="text-align:center">##ploting…</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/make_biDetails.py">make_biDetails.py</a></td>
+<td style="text-align:left">creates the input file to generate the bicrystal from atomsk package;specify the misorientation angle;22-nov-19</td>
+<td style="text-align:center">## specify theta in inline argument</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/rename_atom_ids.py">rename_atom_ids.py</a></td>
+<td style="text-align:left">renames the atom id from the file “hexPlane30.lmp” with the sequance of atom ids as specified;nov-19;</td>
+<td style="text-align:center">## writing to a text file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/rendergbp_lmp.py">rendergbp_lmp.py</a></td>
+<td style="text-align:left">render the GB microstructure using ovito python; specify the slicde distance; viewing angle; normal plane; slice width;feb-19</td>
+<td style="text-align:center">## using pipleline object## to get the sim cell dimensionspipeline.add_to_scene() ## updating pipeline</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/makegif.py">makegif.py</a></td>
+<td style="text-align:left">Makes *.gif animation;</td>
+<td style="text-align:center">## to calculate the position of atoms in all frames## node data collection using node.compute## particle data extration		## this has the position data of <em>particle_id</em> x y z;access x[1][1]## Writing to csv file</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/ReadFromDump.py">ReadFromDump.py</a></td>
+<td style="text-align:left">this will return a ‘<opfile>.csv’ which can loaded into matlab for ploting. use this <em>$PATH_Ovitos <a href="http://ReadFromDump.py">ReadFromDump.py</a> ‘file.dump’ ‘Position’ 200</em> to run;returns col1 in number of timesteps only;may-19</opfile></td>
+<td style="text-align:center">## getring ip from command line## reading data using ovitos## writing to csv file	## Add more columns to write</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/sliceLayer.py">sliceLayer.py</a></td>
+<td style="text-align:left">Using <em>slice</em> modifer of ovito using ovtio-python-interepreter</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="research/makelmpscript.py">makelmpscript.py</a></td>
+<td style="text-align:left">Specify the pulse center, width and max amplitude ; this generated the lammps file;28-aug-19;</td>
+<td style="text-align:center">## Pulse data, p_center, p_width, a_max        ## insert1: the group of atoms        if ‘##—DefiningGroup—##’ in line:## NOTE: this cannot be linear; it should follow Gaussian curve        ##insert2: timestep        ##insert3: pulse width range</td>
+</tr>
+</tbody>
+</table>
+<!-- [PrintFunction](tutorial_0/print_strings.py)
+
+<br>[editMass](notes/editTextFile.md)
+<br>[editMass2](notes/editTextFile.md.html)
+
+[PrintFunction](basic/print_strings.py) -->
+<h2>Projects</h2>
+<p><a name="projects"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File Name</th>
+<th style="text-align:left">Function</th>
+<th style="text-align:center">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="projects/style.py">style.py</a></td>
+<td style="text-align:left">Using Natural Language tool kit library to identify the style of authors writting;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a name="autogenfile"></a> <a href="projects/writePythonNotes.py">writePythonNotes.py</a></td>
+<td style="text-align:left">Copies all the *.py file into *.md file with about information and comments; documentation purpose; Using this file i created "MY PYTHON DOCUMENTATION"folder=“projects/”		 about=about+next(fsrc)</td>
+<td style="text-align:center">if ‘##’ in line:         ## Writing to <a href="http://notes.md">notes.md</a> file; writng to a file## <a href="https://stackabuse.com/python-list-files-in-a-directory/">ref</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="projects/speech.py">speech.py</a></td>
+<td style="text-align:left">Converts speech into text using google <em>speach2text</em> api; used to convert my notes</td>
+<td style="text-align:center">## use the audio file as source only in .wav## reads the audio file## exception handling</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="projects/netwrokx.py">netwrokx.py</a></td>
+<td style="text-align:left">Using networkx library to plot nodes</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="projects/cleanDT.py">cleanDT.py</a></td>
+<td style="text-align:left">Real Project; Reads the input.csv file; Prints the correstponding DT data into output.csv</td>
+<td style="text-align:center">## REFERENCE VALUES(EDIT) ; dictionaries</td>
+</tr>
+</tbody>
+</table>
+<h2>Problems</h2>
+<p><a name="problems"></a></p>
+<p><a href="">Index</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problem</th>
+<th style="text-align:center">Topic</th>
+<th style="text-align:center">Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="leet/e897.md.html">Increasing Order Search Tree</a></td>
+<td style="text-align:center">Binary Search Tree</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>

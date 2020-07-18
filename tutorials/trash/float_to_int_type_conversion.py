@@ -1,0 +1,11 @@
+print("2"+"3")
+a=int("2")+int(3)
+b=4+7
+c=int(3.1)+int(5.8)
+d="3"*2
+print(a)
+print(b)
+print(c)
+print(d)
+e=int(d)
+print(e)

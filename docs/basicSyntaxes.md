@@ -36,6 +36,12 @@ if(True):
   print("condition is true")
   #if condition is true;the above line will be executed;
   #change the condition to False and try
+
+myMood="happy"
+if(myMood=="happy"):
+  print("I'm so happy :)")
+else:
+  print("I'm confused!")
 ```
 
 ```python

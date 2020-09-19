@@ -6,9 +6,13 @@
 
 This document has been auto-generated using [writePythonNotes.py](#autogenfile); inteded to serve as my quick reference.
 
+[Matlab Scripts - HOME](matlab/index.md.html)
+
 [Shell Scripts - HOME](bash/index.md.html)
 
 [Java Scripts - HOME](java/index.md.html)
+
+
 
 **CONTENTS**
 

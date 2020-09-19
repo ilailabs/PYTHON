@@ -21,7 +21,7 @@ This document has been auto-generated using [writePythonNotes.py](#autogenfile);
 
 <a name=tutorials></a>
 
-##Tutorials
+**Tutorials**
 
 <br>[Basic Syntax](notes/basicSyntaxes.md.html)
 <br>[Class](notes/class.md.html)
@@ -239,12 +239,12 @@ This document has been auto-generated using [writePythonNotes.py](#autogenfile);
 
 
 
-##Data Structures & Algorithms
+**Data Structures & Algorithms**
 <a name=dsalgo></a>
 
 <br>[Linked List](notes/linkedList.md.html)
 
-##Research
+**Research**
 <a name=research></a>
 
 
@@ -294,7 +294,7 @@ This document has been auto-generated using [writePythonNotes.py](#autogenfile);
 
 [PrintFunction](basic/print_strings.py) -->
 
-##Projects
+**Projects**
 <a name=projects></a>
 
 |File Name | Function | Comments |
@@ -306,7 +306,8 @@ This document has been auto-generated using [writePythonNotes.py](#autogenfile);
 | [cleanDT.py](projects/cleanDT.py) | Real Project; Reads the input.csv file; Prints the correstponding DT data into output.csv | ## REFERENCE VALUES(EDIT) ; dictionaries|
 
 
-##Problems
+**Problems**
+
 <a name=problems></a>
 
 [Index]()

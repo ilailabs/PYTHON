@@ -2,11 +2,11 @@
 
 This page is intended to serve as a reference page to the recruitment team of SRM University. Please do not disclose any of my information on this page.
 
-[Copy of email]()
+[Copy of email](email_srm.pdf)
 
-[Motivation to apply]()
+[Motivation to apply](srm_cover.pdf)
 
-[Master Resume]()
+[Master Resume](MASTER.pdf)
 
 **Availability of joining**
 
@@ -18,7 +18,7 @@ This page is intended to serve as a reference page to the recruitment team of SR
 
 1. Engineering Drawing
 2. CAD/CAM lab
-3. Engineering Mathematics
+3. [Engineering Mathematics]()
 7. Engineering Mechanics
 4. Selected topics in Metallurgy and Material sciences.
 5. Selected topics in Theory of machines/Engg design

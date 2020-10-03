@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html data-markdown-preview-plus-context="html-export">
+  <head>
+    <meta charset="utf-8" />
+    <title>1_array.md</title>
+    <style>@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thin-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-thinitalic-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-medium-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-mediumitalic-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-black-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/roboto-blackitalic-webfont.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'roboto_condensedlight';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedlight_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-lightitalic-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condenseditalic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-italic-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedregular';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedbold';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bold-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: condensed;
+}
+@font-face {
+  font-family: 'roboto_condensedbold_italic';
+  src: url('atom://atom-material-ui/assets/fonts/Roboto/robotocondensed-bolditalic-webfont.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-stretch: condensed;
+}
+.emoji {
+  max-width: 1em !important;
+}
+del {
+  text-decoration: none;
+  position: relative;
+}
+del::after {
+  border-bottom: 1px solid black;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+ul.contains-task-list li.task-list-item {
+  position: relative;
+  list-style-type: none;
+}
+ul.contains-task-list li.task-list-item input.task-list-item-checkbox {
+  position: absolute;
+  transform: translateX(-100%);
+  width: 3rem;
+}
+span.critic.comment {
+  position: relative;
+}
+span.critic.comment::before {
+  content: '\1f4ac';
+  position: initial;
+}
+span.critic.comment > span {
+  display: none;
+}
+span.critic.comment:hover > span {
+  display: initial;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border: 1px solid;
+  border-radius: 5px;
+  max-height: 4em;
+  overflow: auto;
+}
+span.critic.comment:focus > span {
+  display: initial;
+  text-decoration: underline;
+  position: initial;
+  top: auto;
+  left: auto;
+  border: initial;
+  border-radius: initial;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: transparent;
+}
+
+body {
+  padding: 2em;
+  font-size: 1.2em;
+  color: #383a42;
+  background-color: #fafafa;
+  overflow: auto;
+}
+body > :first-child,
+body > div.update-preview > :first-child {
+  margin-top: 0;
+}
+body > p,
+body > div.update-preview > p {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+body > ul,
+body > div.update-preview > ul,
+body > ol,
+body > div.update-preview > ol {
+  margin-bottom: 1.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+strong {
+  color: #000000;
+}
+del {
+  color: #5e616e;
+}
+a,
+a code {
+  color: #526fff;
+}
+img {
+  max-width: 100%;
+}
+blockquote {
+  margin: 1.5em 0;
+  font-size: inherit;
+  color: #5e616e;
+  border-color: #d1d1d2;
+  border-width: 4px;
+}
+hr {
+  margin: 3em 0;
+  border-top: 2px dashed #d1d1d2;
+  background: none;
+}
+table {
+  margin: 1.5em 0;
+}
+th {
+  color: #000000;
+}
+th,
+td {
+  padding: 0.66em 1em;
+  border: 1px solid #d1d1d2;
+}
+code {
+  color: #000000;
+  background-color: #eaeaeb;
+}
+pre.editor-colors {
+  margin: 1.5em 0;
+  padding: 1em;
+  font-size: 0.92em;
+  border-radius: 3px;
+  background-color: #f0f0f0;
+}
+kbd {
+  color: #000000;
+  border: 1px solid #d1d1d2;
+  border-bottom: 2px solid #c1c1c2;
+  background-color: #eaeaeb;
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #383a42;
+  background-color: #e5e5e6;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #fafafa;
+  color: #383a42;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(56, 58, 66, 0.05);
+}
+pre.editor-colors .invisible {
+  color: #383a42;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #526fff;
+}
+pre.editor-colors .selection .region {
+  background-color: #e5e5e6;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #526fff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 111, 255, 0.2);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #526fff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #9d9d9f;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #383a42;
+  background-color: #e5e5e6;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #383a42;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #383a42;
+}
+.syntax--comment {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #a0a1a7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #c18401;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #50a14f;
+}
+.syntax--keyword {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--control {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--operator {
+  color: #383a42;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #4078f2;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #986801;
+}
+.syntax--storage {
+  color: #a626a4;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #a626a4;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #383a42;
+}
+.syntax--constant {
+  color: #986801;
+}
+.syntax--constant.syntax--variable {
+  color: #986801;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #0184bc;
+}
+.syntax--constant.syntax--numeric {
+  color: #986801;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #0184bc;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #0184bc;
+}
+.syntax--variable {
+  color: #e45649;
+}
+.syntax--variable.syntax--interpolation {
+  color: #ca1243;
+}
+.syntax--variable.syntax--parameter {
+  color: #383a42;
+}
+.syntax--string {
+  color: #50a14f;
+}
+.syntax--string > .syntax--source,
+.syntax--string .syntax--embedded {
+  color: #383a42;
+}
+.syntax--string.syntax--regexp {
+  color: #0184bc;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #c18401;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e45649;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #a0a1a7;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #383a42;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #4078f2;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #c18401;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #ca1243;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #383a42;
+}
+.syntax--support.syntax--class {
+  color: #c18401;
+}
+.syntax--support.syntax--type {
+  color: #0184bc;
+}
+.syntax--support.syntax--function {
+  color: #0184bc;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #c18401;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e45649;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #986801;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #4078f2;
+}
+.syntax--meta.syntax--class {
+  color: #c18401;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #383a42;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #383a42;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e45649;
+}
+.syntax--meta.syntax--link {
+  color: #986801;
+}
+.syntax--meta.syntax--require {
+  color: #4078f2;
+}
+.syntax--meta.syntax--selector {
+  color: #a626a4;
+}
+.syntax--meta.syntax--separator {
+  color: #383a42;
+}
+.syntax--meta.syntax--tag {
+  color: #383a42;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #383a42;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #000000 !important;
+  background-color: #f2a60d !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #ff1414 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #986801;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #a626a4;
+}
+.syntax--markup.syntax--deleted {
+  color: #e45649;
+}
+.syntax--markup.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e45649;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #4078f2;
+}
+.syntax--markup.syntax--link {
+  color: #0184bc;
+}
+.syntax--markup.syntax--inserted {
+  color: #50a14f;
+}
+.syntax--markup.syntax--quote {
+  color: #986801;
+}
+.syntax--markup.syntax--raw {
+  color: #50a14f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #696c77;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #4078f2;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #a626a4;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #986801;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #50a14f;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #ca1243;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #986801;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #c18401;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #696c77;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #4078f2;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #a626a4;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e45649;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #a626a4;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e45649;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #383a42;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #a626a4;
+}
+.syntax--source.syntax--ts .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--flow .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #50a14f;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #0184bc;
+}
+.syntax--ng.syntax--interpolation {
+  color: #e45649;
+}
+.syntax--ng.syntax--interpolation.syntax--begin,
+.syntax--ng.syntax--interpolation.syntax--end {
+  color: #4078f2;
+}
+.syntax--ng.syntax--interpolation .syntax--function {
+  color: #e45649;
+}
+.syntax--ng.syntax--interpolation .syntax--function.syntax--begin,
+.syntax--ng.syntax--interpolation .syntax--function.syntax--end {
+  color: #4078f2;
+}
+.syntax--ng.syntax--interpolation .syntax--bool {
+  color: #986801;
+}
+.syntax--ng.syntax--interpolation .syntax--bracket {
+  color: #383a42;
+}
+.syntax--ng.syntax--pipe,
+.syntax--ng.syntax--operator {
+  color: #383a42;
+}
+.syntax--ng.syntax--tag {
+  color: #0184bc;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--attribute-name {
+  color: #c18401;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string {
+  color: #a626a4;
+}
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--begin,
+.syntax--ng.syntax--attribute-with-value .syntax--string.syntax--end {
+  color: #383a42;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #383a42;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #a626a4;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #986801;
+}
+</style>
+
+  </head>
+  <body>
+    <h2>Arrays</h2>
+<ul>
+<li>18/115</li>
+<li>18/38 problems</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">#</th>
+<th style="text-align:center">Problem</th>
+<th style="text-align:center">Solution</th>
+<th style="text-align:center">Rate</th>
+<th style="text-align:center">Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">Two Sum</td>
+<td style="text-align:center"><a href="#1soln">mySoln</a> <a href="#1ref">refSoln</a></td>
+<td style="text-align:center">45.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">26</td>
+<td style="text-align:center">Remove Duplicates from Sorted Array</td>
+<td style="text-align:center"><a href="#26soln">mySoln</a> <a href="#26ref">refSoln</a></td>
+<td style="text-align:center">45.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">Remove Element</td>
+<td style="text-align:center"><a href="#27soln">mySoln</a> <a href="#27ref">refSoln</a></td>
+<td style="text-align:center">48.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">35</td>
+<td style="text-align:center">Search Insert Position</td>
+<td style="text-align:center"><a href="#35soln">mySoln</a> <a href="#35ref">refSoln</a></td>
+<td style="text-align:center">42.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">53</td>
+<td style="text-align:center">Maximum Subarray</td>
+<td style="text-align:center"><a href="#53soln">mySoln</a> <a href="#53ref">refSoln</a></td>
+<td style="text-align:center">47.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">66</td>
+<td style="text-align:center">Plus One</td>
+<td style="text-align:center"><a href="#66soln">mySoln</a> <a href="#66ref">refSoln</a></td>
+<td style="text-align:center">43.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">88</td>
+<td style="text-align:center">Merge Sorted Array</td>
+<td style="text-align:center"><a href="#88soln">mySoln</a> <a href="#88ref">refSoln</a></td>
+<td style="text-align:center">39.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">118</td>
+<td style="text-align:center">Pascal’s Triangle</td>
+<td style="text-align:center"><a href="#118soln">mySoln</a> <a href="#118ref">refSoln</a></td>
+<td style="text-align:center">53.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">119</td>
+<td style="text-align:center">Pascal’s Triangle II</td>
+<td style="text-align:center"><a href="#119soln">mySoln</a> <a href="#119ref">refSoln</a></td>
+<td style="text-align:center">51.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">121</td>
+<td style="text-align:center">Best Time to Buy and Sell Stock</td>
+<td style="text-align:center"><a href="#121soln">mySoln</a> <a href="#121ref">refSoln</a></td>
+<td style="text-align:center">51.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">122</td>
+<td style="text-align:center">Best Time to Buy and Sell Stock II</td>
+<td style="text-align:center"><a href="#122soln">mySoln</a> <a href="#122ref">refSoln</a></td>
+<td style="text-align:center">57.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">167</td>
+<td style="text-align:center">Two Sum II - Input array is sorted</td>
+<td style="text-align:center"><a href="#167soln">mySoln</a> <a href="#167ref">refSoln</a></td>
+<td style="text-align:center">54.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">169</td>
+<td style="text-align:center">Majority Element</td>
+<td style="text-align:center"><a href="#169soln">mySoln</a> <a href="#169ref">refSoln</a></td>
+<td style="text-align:center">59.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">189</td>
+<td style="text-align:center">Rotate Array</td>
+<td style="text-align:center"><a href="#189soln">mySoln</a> <a href="#189ref">refSoln</a></td>
+<td style="text-align:center">35.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">217</td>
+<td style="text-align:center">Contains Duplicate</td>
+<td style="text-align:center"><a href="#217soln">mySoln</a> <a href="#217ref">refSoln</a></td>
+<td style="text-align:center">56.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">219</td>
+<td style="text-align:center">Contains Duplicate II</td>
+<td style="text-align:center"><a href="#219soln">mySoln</a> <a href="#219ref">refSoln</a></td>
+<td style="text-align:center">38.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">243</td>
+<td style="text-align:center">Shortest Word Distance</td>
+<td style="text-align:center"><a href="#243soln">mySoln</a> <a href="#243ref">refSoln</a></td>
+<td style="text-align:center">61.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">268</td>
+<td style="text-align:center">Missing Number</td>
+<td style="text-align:center"><a href="#268soln">mySoln</a> <a href="#268ref">refSoln</a></td>
+<td style="text-align:center">52.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">283</td>
+<td style="text-align:center">Move Zeroes</td>
+<td style="text-align:center"><a href="#283soln">mySoln</a> <a href="#283ref">refSoln</a></td>
+<td style="text-align:center">58.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">414</td>
+<td style="text-align:center">Third Maximum Number</td>
+<td style="text-align:center"><a href="#414soln">mySoln</a> <a href="#414ref">refSoln</a></td>
+<td style="text-align:center">30.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">448</td>
+<td style="text-align:center">Find All Numbers Disappeared in an Array</td>
+<td style="text-align:center"><a href="#448soln">mySoln</a> <a href="#448ref">refSoln</a></td>
+<td style="text-align:center">56.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">485</td>
+<td style="text-align:center">Max Consecutive Ones</td>
+<td style="text-align:center"><a href="#485soln">mySoln</a> <a href="#485ref">refSoln</a></td>
+<td style="text-align:center">54.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">509</td>
+<td style="text-align:center">Fibonacci Number</td>
+<td style="text-align:center"><a href="#509soln">mySoln</a> <a href="#509ref">refSoln</a></td>
+<td style="text-align:center">67.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">561</td>
+<td style="text-align:center">Array Partition I</td>
+<td style="text-align:center"><a href="#561soln">mySoln</a> <a href="#561ref">refSoln</a></td>
+<td style="text-align:center">72.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">566</td>
+<td style="text-align:center">Reshape the Matrix</td>
+<td style="text-align:center"><a href="#566soln">mySoln</a> <a href="#566ref">refSoln</a></td>
+<td style="text-align:center">60.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">605</td>
+<td style="text-align:center">Can Place Flowers</td>
+<td style="text-align:center"><a href="#605soln">mySoln</a> <a href="#605ref">refSoln</a></td>
+<td style="text-align:center">31.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">628</td>
+<td style="text-align:center">Maximum Product of Three Numbers</td>
+<td style="text-align:center"><a href="#628soln">mySoln</a> <a href="#628ref">refSoln</a></td>
+<td style="text-align:center">47.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">643</td>
+<td style="text-align:center">Maximum Average Subarray I</td>
+<td style="text-align:center"><a href="#643soln">mySoln</a> <a href="#643ref">refSoln</a></td>
+<td style="text-align:center">41.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">661</td>
+<td style="text-align:center">Image Smoother</td>
+<td style="text-align:center"><a href="#661soln">mySoln</a> <a href="#661ref">refSoln</a></td>
+<td style="text-align:center">51.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">665</td>
+<td style="text-align:center">Non-decreasing Array</td>
+<td style="text-align:center"><a href="#665soln">mySoln</a> <a href="#665ref">refSoln</a></td>
+<td style="text-align:center">19.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">674</td>
+<td style="text-align:center">Longest Continuous Increasing Subsequence</td>
+<td style="text-align:center"><a href="#674soln">mySoln</a> <a href="#674ref">refSoln</a></td>
+<td style="text-align:center">45.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">697</td>
+<td style="text-align:center">Degree of an Array</td>
+<td style="text-align:center"><a href="#697soln">mySoln</a> <a href="#697ref">refSoln</a></td>
+<td style="text-align:center">54.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">717</td>
+<td style="text-align:center">1-bit and 2-bit Characters</td>
+<td style="text-align:center"><a href="#717soln">mySoln</a> <a href="#717ref">refSoln</a></td>
+<td style="text-align:center">48.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">724</td>
+<td style="text-align:center">Find Pivot Index</td>
+<td style="text-align:center"><a href="#724soln">mySoln</a> <a href="#724ref">refSoln</a></td>
+<td style="text-align:center">44.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">746</td>
+<td style="text-align:center">Min Cost Climbing Stairs</td>
+<td style="text-align:center"><a href="#746soln">mySoln</a> <a href="#746ref">refSoln</a></td>
+<td style="text-align:center">50.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">747</td>
+<td style="text-align:center">Largest Number At Least Twice of Others</td>
+<td style="text-align:center"><a href="#747soln">mySoln</a> <a href="#747ref">refSoln</a></td>
+<td style="text-align:center">42.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">766</td>
+<td style="text-align:center">Toeplitz Matrix</td>
+<td style="text-align:center"><a href="#766soln">mySoln</a> <a href="#766ref">refSoln</a></td>
+<td style="text-align:center">65.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">830</td>
+<td style="text-align:center">Positions of Large Groups</td>
+<td style="text-align:center"><a href="#830soln">mySoln</a> <a href="#830ref">refSoln</a></td>
+<td style="text-align:center">49.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">832</td>
+<td style="text-align:center">Flipping an Image</td>
+<td style="text-align:center"><a href="#832soln">mySoln</a> <a href="#832ref">refSoln</a></td>
+<td style="text-align:center">76.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">867</td>
+<td style="text-align:center">Transpose Matrix</td>
+<td style="text-align:center"><a href="#867soln">mySoln</a> <a href="#867ref">refSoln</a></td>
+<td style="text-align:center">62.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">888</td>
+<td style="text-align:center">Fair Candy Swap</td>
+<td style="text-align:center"><a href="#888soln">mySoln</a> <a href="#888ref">refSoln</a></td>
+<td style="text-align:center">58.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">896</td>
+<td style="text-align:center">Monotonic Array</td>
+<td style="text-align:center"><a href="#896soln">mySoln</a> <a href="#896ref">refSoln</a></td>
+<td style="text-align:center">58.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">905</td>
+<td style="text-align:center">Sort Array By Parity</td>
+<td style="text-align:center"><a href="#905soln">mySoln</a> <a href="#905ref">refSoln</a></td>
+<td style="text-align:center">74.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">914</td>
+<td style="text-align:center">X of a Kind in a Deck of Cards</td>
+<td style="text-align:center"><a href="#914soln">mySoln</a> <a href="#914ref">refSoln</a></td>
+<td style="text-align:center">34.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">922</td>
+<td style="text-align:center">Sort Array By Parity II</td>
+<td style="text-align:center"><a href="#922soln">mySoln</a> <a href="#922ref">refSoln</a></td>
+<td style="text-align:center">69.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">941</td>
+<td style="text-align:center">Valid Mountain Array</td>
+<td style="text-align:center"><a href="#941soln">mySoln</a> <a href="#941ref">refSoln</a></td>
+<td style="text-align:center">32.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">977</td>
+<td style="text-align:center">Squares of a Sorted Array</td>
+<td style="text-align:center"><a href="#977soln">mySoln</a> <a href="#977ref">refSoln</a></td>
+<td style="text-align:center">72.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">985</td>
+<td style="text-align:center">Sum of Even Numbers After Queries</td>
+<td style="text-align:center"><a href="#985soln">mySoln</a> <a href="#985ref">refSoln</a></td>
+<td style="text-align:center">61.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">989</td>
+<td style="text-align:center">Add to Array-Form of Integer</td>
+<td style="text-align:center"><a href="#989soln">mySoln</a> <a href="#989ref">refSoln</a></td>
+<td style="text-align:center">44.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">999</td>
+<td style="text-align:center">Available Captures for Rook</td>
+<td style="text-align:center"><a href="#999soln">mySoln</a> <a href="#999ref">refSoln</a></td>
+<td style="text-align:center">66.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1002</td>
+<td style="text-align:center">Find Common Characters</td>
+<td style="text-align:center"><a href="#1002soln">mySoln</a> <a href="#1002ref">refSoln</a></td>
+<td style="text-align:center">67.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1010</td>
+<td style="text-align:center">Pairs of Songs With Total Durations Divisible by 60</td>
+<td style="text-align:center"><a href="#1010soln">mySoln</a> <a href="#1010ref">refSoln</a></td>
+<td style="text-align:center">47.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1013</td>
+<td style="text-align:center">Partition Array Into Three Parts With Equal Sum</td>
+<td style="text-align:center"><a href="#1013soln">mySoln</a> <a href="#1013ref">refSoln</a></td>
+<td style="text-align:center">50.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1018</td>
+<td style="text-align:center">Binary Prefix Divisible By 5</td>
+<td style="text-align:center"><a href="#1018soln">mySoln</a> <a href="#1018ref">refSoln</a></td>
+<td style="text-align:center">47.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1051</td>
+<td style="text-align:center">Height Checker</td>
+<td style="text-align:center"><a href="#1051soln">mySoln</a> <a href="#1051ref">refSoln</a></td>
+<td style="text-align:center">71.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1064</td>
+<td style="text-align:center">Fixed Point</td>
+<td style="text-align:center"><a href="#1064soln">mySoln</a> <a href="#1064ref">refSoln</a></td>
+<td style="text-align:center">65.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1085</td>
+<td style="text-align:center">Sum of Digits in the Minimum Number</td>
+<td style="text-align:center"><a href="#1085soln">mySoln</a> <a href="#1085ref">refSoln</a></td>
+<td style="text-align:center">74.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1086</td>
+<td style="text-align:center">High Five</td>
+<td style="text-align:center"><a href="#1086soln">mySoln</a> <a href="#1086ref">refSoln</a></td>
+<td style="text-align:center">80.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1089</td>
+<td style="text-align:center">Duplicate Zeros</td>
+<td style="text-align:center"><a href="#1089soln">mySoln</a> <a href="#1089ref">refSoln</a></td>
+<td style="text-align:center">52.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1099</td>
+<td style="text-align:center">Two Sum Less Than K</td>
+<td style="text-align:center"><a href="#1099soln">mySoln</a> <a href="#1099ref">refSoln</a></td>
+<td style="text-align:center">60.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1122</td>
+<td style="text-align:center">Relative Sort Array</td>
+<td style="text-align:center"><a href="#1122soln">mySoln</a> <a href="#1122ref">refSoln</a></td>
+<td style="text-align:center">67.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1128</td>
+<td style="text-align:center">Number of Equivalent Domino Pairs</td>
+<td style="text-align:center"><a href="#1128soln">mySoln</a> <a href="#1128ref">refSoln</a></td>
+<td style="text-align:center">47.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1133</td>
+<td style="text-align:center">Largest Unique Number</td>
+<td style="text-align:center"><a href="#1133soln">mySoln</a> <a href="#1133ref">refSoln</a></td>
+<td style="text-align:center">67.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1150</td>
+<td style="text-align:center">Check If a Number Is Majority Element in a Sorted Array</td>
+<td style="text-align:center"><a href="#1150soln">mySoln</a> <a href="#1150ref">refSoln</a></td>
+<td style="text-align:center">58.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1160</td>
+<td style="text-align:center">Find Words That Can Be Formed by Characters</td>
+<td style="text-align:center"><a href="#1160soln">mySoln</a> <a href="#1160ref">refSoln</a></td>
+<td style="text-align:center">67.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1170</td>
+<td style="text-align:center">Compare Strings by Frequency of the Smallest Character</td>
+<td style="text-align:center"><a href="#1170soln">mySoln</a> <a href="#1170ref">refSoln</a></td>
+<td style="text-align:center">59.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1176</td>
+<td style="text-align:center">Diet Plan Performance</td>
+<td style="text-align:center"><a href="#1176soln">mySoln</a> <a href="#1176ref">refSoln</a></td>
+<td style="text-align:center">53.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1184</td>
+<td style="text-align:center">Distance Between Bus Stops</td>
+<td style="text-align:center"><a href="#1184soln">mySoln</a> <a href="#1184ref">refSoln</a></td>
+<td style="text-align:center">54.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1185</td>
+<td style="text-align:center">Day of the Week</td>
+<td style="text-align:center"><a href="#1185soln">mySoln</a> <a href="#1185ref">refSoln</a></td>
+<td style="text-align:center">63.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1200</td>
+<td style="text-align:center">Minimum Absolute Difference</td>
+<td style="text-align:center"><a href="#1200soln">mySoln</a> <a href="#1200ref">refSoln</a></td>
+<td style="text-align:center">66.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1217</td>
+<td style="text-align:center">Minimum Cost to Move Chips to The Same Position</td>
+<td style="text-align:center"><a href="#1217soln">mySoln</a> <a href="#1217ref">refSoln</a></td>
+<td style="text-align:center">65.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1232</td>
+<td style="text-align:center">Check If It Is a Straight Line</td>
+<td style="text-align:center"><a href="#1232soln">mySoln</a> <a href="#1232ref">refSoln</a></td>
+<td style="text-align:center">44.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1243</td>
+<td style="text-align:center">Array Transformation</td>
+<td style="text-align:center"><a href="#1243soln">mySoln</a> <a href="#1243ref">refSoln</a></td>
+<td style="text-align:center">50.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1252</td>
+<td style="text-align:center">Cells with Odd Values in a Matrix</td>
+<td style="text-align:center"><a href="#1252soln">mySoln</a> <a href="#1252ref">refSoln</a></td>
+<td style="text-align:center">78.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1260</td>
+<td style="text-align:center">Shift 2D Grid</td>
+<td style="text-align:center"><a href="#1260soln">mySoln</a> <a href="#1260ref">refSoln</a></td>
+<td style="text-align:center">61.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1266</td>
+<td style="text-align:center">Minimum Time Visiting All Points</td>
+<td style="text-align:center"><a href="#1266soln">mySoln</a> <a href="#1266ref">refSoln</a></td>
+<td style="text-align:center">79.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1275</td>
+<td style="text-align:center">Find Winner on a Tic Tac Toe Game</td>
+<td style="text-align:center"><a href="#1275soln">mySoln</a> <a href="#1275ref">refSoln</a></td>
+<td style="text-align:center">52.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1287</td>
+<td style="text-align:center">Element Appearing More Than 25% In Sorted Array</td>
+<td style="text-align:center"><a href="#1287soln">mySoln</a> <a href="#1287ref">refSoln</a></td>
+<td style="text-align:center">60.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1295</td>
+<td style="text-align:center">Find Numbers with Even Number of Digits</td>
+<td style="text-align:center"><a href="#1295soln">mySoln</a> <a href="#1295ref">refSoln</a></td>
+<td style="text-align:center">80.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1299</td>
+<td style="text-align:center">Replace Elements with Greatest Element on Right Side</td>
+<td style="text-align:center"><a href="#1299soln">mySoln</a> <a href="#1299ref">refSoln</a></td>
+<td style="text-align:center">74.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1304</td>
+<td style="text-align:center">Find N Unique Integers Sum up to Zero</td>
+<td style="text-align:center"><a href="#1304soln">mySoln</a> <a href="#1304ref">refSoln</a></td>
+<td style="text-align:center">76.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1313</td>
+<td style="text-align:center">Decompress Run-Length Encoded List</td>
+<td style="text-align:center"><a href="#1313soln">mySoln</a> <a href="#1313ref">refSoln</a></td>
+<td style="text-align:center">85.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1331</td>
+<td style="text-align:center">Rank Transform of an Array</td>
+<td style="text-align:center"><a href="#1331soln">mySoln</a> <a href="#1331ref">refSoln</a></td>
+<td style="text-align:center">57.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1337</td>
+<td style="text-align:center">The K Weakest Rows in a Matrix</td>
+<td style="text-align:center"><a href="#1337soln">mySoln</a> <a href="#1337ref">refSoln</a></td>
+<td style="text-align:center">69.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1346</td>
+<td style="text-align:center">Check If N and Its Double Exist</td>
+<td style="text-align:center"><a href="#1346soln">mySoln</a> <a href="#1346ref">refSoln</a></td>
+<td style="text-align:center">37.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1351</td>
+<td style="text-align:center">Count Negative Numbers in a Sorted Matrix</td>
+<td style="text-align:center"><a href="#1351soln">mySoln</a> <a href="#1351ref">refSoln</a></td>
+<td style="text-align:center">76.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1365</td>
+<td style="text-align:center">How Many Numbers Are Smaller Than the Current Number</td>
+<td style="text-align:center"><a href="#1365soln">mySoln</a> <a href="#1365ref">refSoln</a></td>
+<td style="text-align:center">85.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1380</td>
+<td style="text-align:center">Lucky Numbers in a Matrix</td>
+<td style="text-align:center"><a href="#1380soln">mySoln</a> <a href="#1380ref">refSoln</a></td>
+<td style="text-align:center">71.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1385</td>
+<td style="text-align:center">Find the Distance Value Between Two Arrays</td>
+<td style="text-align:center"><a href="#1385soln">mySoln</a> <a href="#1385ref">refSoln</a></td>
+<td style="text-align:center">66.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1389</td>
+<td style="text-align:center">Create Target Array in the Given Order</td>
+<td style="text-align:center"><a href="#1389soln">mySoln</a> <a href="#1389ref">refSoln</a></td>
+<td style="text-align:center">84.5%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1394</td>
+<td style="text-align:center">Find Lucky Integer in an Array</td>
+<td style="text-align:center"><a href="#1394soln">mySoln</a> <a href="#1394ref">refSoln</a></td>
+<td style="text-align:center">63.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1399</td>
+<td style="text-align:center">Count Largest Group</td>
+<td style="text-align:center"><a href="#1399soln">mySoln</a> <a href="#1399ref">refSoln</a></td>
+<td style="text-align:center">65.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1413</td>
+<td style="text-align:center">Minimum Value to Get Positive Step by Step Sum</td>
+<td style="text-align:center"><a href="#1413soln">mySoln</a> <a href="#1413ref">refSoln</a></td>
+<td style="text-align:center">65.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1426</td>
+<td style="text-align:center">Counting Elements</td>
+<td style="text-align:center"><a href="#1426soln">mySoln</a> <a href="#1426ref">refSoln</a></td>
+<td style="text-align:center">58.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1427</td>
+<td style="text-align:center">Perform String Shifts</td>
+<td style="text-align:center"><a href="#1427soln">mySoln</a> <a href="#1427ref">refSoln</a></td>
+<td style="text-align:center">53.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1431</td>
+<td style="text-align:center">Kids With the Greatest Number of Candies</td>
+<td style="text-align:center"><a href="#1431soln">mySoln</a> <a href="#1431ref">refSoln</a></td>
+<td style="text-align:center">88.7%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1450</td>
+<td style="text-align:center">Number of Students Doing Homework at a Given Time</td>
+<td style="text-align:center"><a href="#1450soln">mySoln</a> <a href="#1450ref">refSoln</a></td>
+<td style="text-align:center">77.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1460</td>
+<td style="text-align:center">Make Two Arrays Equal by Reversing Sub-arrays</td>
+<td style="text-align:center"><a href="#1460soln">mySoln</a> <a href="#1460ref">refSoln</a></td>
+<td style="text-align:center">72.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1464</td>
+<td style="text-align:center">Maximum Product of Two Elements in an Array</td>
+<td style="text-align:center"><a href="#1464soln">mySoln</a> <a href="#1464ref">refSoln</a></td>
+<td style="text-align:center">77.4%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1470</td>
+<td style="text-align:center">Shuffle the Array</td>
+<td style="text-align:center"><a href="#1470soln">mySoln</a> <a href="#1470ref">refSoln</a></td>
+<td style="text-align:center">88.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1475</td>
+<td style="text-align:center">Final Prices With a Special Discount in a Shop</td>
+<td style="text-align:center"><a href="#1475soln">mySoln</a> <a href="#1475ref">refSoln</a></td>
+<td style="text-align:center">75.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1480</td>
+<td style="text-align:center">Running Sum of 1d Array</td>
+<td style="text-align:center"><a href="#1480soln">mySoln</a> <a href="#1480ref">refSoln</a></td>
+<td style="text-align:center">89.8%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1486</td>
+<td style="text-align:center">XOR Operation in an Array</td>
+<td style="text-align:center"><a href="#1486soln">mySoln</a> <a href="#1486ref">refSoln</a></td>
+<td style="text-align:center">84.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1491</td>
+<td style="text-align:center">Average Salary Excluding the Minimum and Maximum Salary</td>
+<td style="text-align:center"><a href="#1491soln">mySoln</a> <a href="#1491ref">refSoln</a></td>
+<td style="text-align:center">69.1%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1502</td>
+<td style="text-align:center">Can Make Arithmetic Progression From Sequence</td>
+<td style="text-align:center"><a href="#1502soln">mySoln</a> <a href="#1502ref">refSoln</a></td>
+<td style="text-align:center">71.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1512</td>
+<td style="text-align:center">Number of Good Pairs</td>
+<td style="text-align:center"><a href="#1512soln">mySoln</a> <a href="#1512ref">refSoln</a></td>
+<td style="text-align:center">88.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1534</td>
+<td style="text-align:center">Count Good Triplets</td>
+<td style="text-align:center"><a href="#1534soln">mySoln</a> <a href="#1534ref">refSoln</a></td>
+<td style="text-align:center">79.9%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1539</td>
+<td style="text-align:center">Kth Missing Positive Number</td>
+<td style="text-align:center"><a href="#1539soln">mySoln</a> <a href="#1539ref">refSoln</a></td>
+<td style="text-align:center">53.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1550</td>
+<td style="text-align:center">Three Consecutive Odds</td>
+<td style="text-align:center"><a href="#1550soln">mySoln</a> <a href="#1550ref">refSoln</a></td>
+<td style="text-align:center">66.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1560</td>
+<td style="text-align:center">Most Visited Sector in a Circular Track</td>
+<td style="text-align:center"><a href="#1560soln">mySoln</a> <a href="#1560ref">refSoln</a></td>
+<td style="text-align:center">56.6%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1566</td>
+<td style="text-align:center">Detect Pattern of Length M Repeated K or More Times</td>
+<td style="text-align:center"><a href="#1566soln">mySoln</a> <a href="#1566ref">refSoln</a></td>
+<td style="text-align:center">42.0%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1572</td>
+<td style="text-align:center">Matrix Diagonal Sum</td>
+<td style="text-align:center"><a href="#1572soln">mySoln</a> <a href="#1572ref">refSoln</a></td>
+<td style="text-align:center">79.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1582</td>
+<td style="text-align:center">Special Positions in a Binary Matrix</td>
+<td style="text-align:center"><a href="#1582soln">mySoln</a> <a href="#1582ref">refSoln</a></td>
+<td style="text-align:center">64.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1588</td>
+<td style="text-align:center">Sum of All Odd Length Subarrays</td>
+<td style="text-align:center"><a href="#1588soln">mySoln</a> <a href="#1588ref">refSoln</a></td>
+<td style="text-align:center">81.2%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+<tr>
+<td style="text-align:center">1608</td>
+<td style="text-align:center">Special Array With X Elements Greater Than or Equal X</td>
+<td style="text-align:center"><a href="#1608soln">mySoln</a> <a href="#1608ref">refSoln</a></td>
+<td style="text-align:center">63.3%</td>
+<td style="text-align:center">Easy</td>
+</tr>
+</tbody>
+</table>
+<p><a name="1soln"></a>
+<strong>1. Two Sum</strong></p>
+<p><em>return indices of the two numbers such that they add up to target.</em></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">nums = [2,7,11,15], target = 9</code></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">[0,1]</code></p>
+<pre class="editor-colors lang-python"><span><span class="syntax--source syntax--python"><span class="syntax--storage syntax--type syntax--function">def</span> <span class="syntax--entity syntax--name syntax--function">twoSum</span>(<span class="syntax--variable syntax--parameter syntax--function">self</span>, <span class="syntax--variable syntax--parameter syntax--function">nums</span>, <span class="syntax--variable syntax--parameter syntax--function">target</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">for</span> i <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(nums)):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(nums)):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span><span class="syntax--keyword syntax--control">if</span>(nums[i]<span class="syntax--keyword syntax--operator">+</span>nums[j]<span class="syntax--keyword syntax--operator">==</span>target <span class="syntax--keyword syntax--operator syntax--logical syntax--python">and</span> i<span class="syntax--keyword syntax--operator">!=</span>j):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">                </span><span class="syntax--keyword syntax--control">return</span> [i, j]</span></span></pre>
+<pre class="editor-colors lang-python"><span><span class="syntax--source syntax--python"><span class="syntax--storage syntax--type syntax--function">def</span> <span class="syntax--entity syntax--name syntax--function">twoSum</span>(<span class="syntax--variable syntax--parameter syntax--function">self</span>, <span class="syntax--variable syntax--parameter syntax--function">nums</span>, <span class="syntax--variable syntax--parameter syntax--function">target</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>d <span class="syntax--keyword syntax--operator">=</span> {}</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">for</span> i, n <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">enumerate</span>(nums):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span>m <span class="syntax--keyword syntax--operator">=</span> target <span class="syntax--keyword syntax--operator">-</span> n</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">if</span> m <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> d:</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span><span class="syntax--keyword syntax--control">return</span> [d[m], i]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">else</span>:</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>d[n] <span class="syntax--keyword syntax--operator">=</span> i</span></span></pre>
+<p><a name="26soln"></a></p>
+<p><strong>26. Remove Duplicates from Sorted Array</strong></p>
+<p><em>Given a sorted array nums, remove the duplicates in-place such that each element appears only once and returns the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</em></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">nums = [1,1,2]</code></p>
+<p>Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.</p>
+<pre class="editor-colors lang-python"><span><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> i <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> nums:</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">if</span>(nums.<span class="syntax--entity syntax--name syntax--function">count</span>(i)<span class="syntax--keyword syntax--operator">&gt;</span><span class="syntax--constant syntax--numeric">1</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--comment syntax--line">#remove element this many times</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(nums.<span class="syntax--entity syntax--name syntax--function">count</span>(i)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>nums.<span class="syntax--entity syntax--name syntax--function">remove</span>(i)</span></span>
+<span class=""></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">return</span>(<span class="syntax--support syntax--function">len</span>(nums))</span></span>
+<span class=""></span> </pre>
+<p><a name="27soln"></a>
+<strong>27. Remove Element</strong></p>
+<p><em>Given an array nums and a value val, remove all instances of that value in-place and return the new length.
+Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
+The order of elements can be changed. It doesn’t matter what you leave beyond the new length.</em></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">nums = [3,2,2,3], val = 3,</code></p>
+<p>Your function should return length = 2, with the first two elements of nums being 2.</p>
+<pre class="editor-colors lang-python"><span></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(nums.<span class="syntax--entity syntax--name syntax--function">count</span>(val)):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>nums.<span class="syntax--entity syntax--name syntax--function">remove</span>(val)</span></span>
+<span class=""></span> </pre>
+<p><a name="35soln"></a>
+<strong>35. Search Insert Position</strong></p>
+<p><em>Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.</em></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">nums = [1,3,5,6], target = 5</code></p>
+<blockquote>
+<blockquote>
+<p>2</p>
+</blockquote>
+</blockquote>
+<pre class="editor-colors lang-python"><span><span class="syntax--source syntax--python">nums.<span class="syntax--entity syntax--name syntax--function">append</span>(target)</span></span>
+<span class=""><span class="syntax--source syntax--python">nums.<span class="syntax--entity syntax--name syntax--function">sort</span>()</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">return</span>(nums.<span class="syntax--entity syntax--name syntax--function">index</span>(target))</span></span></pre>
+<p><a name="66soln"></a>
+<strong>66. Plus One</strong></p>
+<p><em>Given a non-empty array of digits representing a non-negative integer, increment one to the integer.
+The digits are stored such that the most significant digit is at the head of the list, and each element in the array contains a single digit.
+You may assume the integer does not contain any leading zero, except the number 0 itself.</em></p>
+<p><code style="font-family: Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace;">digits = [1,2,3]</code></p>
+<blockquote>
+<blockquote>
+<p>[1,2,4]</p>
+</blockquote>
+</blockquote>
+<pre class="editor-colors lang-python"><span></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line">#convert array to integer</span></span></span>
+<span class=""><span class="syntax--source syntax--python">num<span class="syntax--keyword syntax--operator">=</span><span class="syntax--constant syntax--numeric">0</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(digits)):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>p<span class="syntax--keyword syntax--operator">=</span><span class="syntax--constant syntax--numeric">10</span><span class="syntax--keyword syntax--operator">**</span>(<span class="syntax--support syntax--function">len</span>(digits)<span class="syntax--keyword syntax--operator">-</span>(j<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">1</span>))</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>num<span class="syntax--keyword syntax--operator">=</span>num<span class="syntax--keyword syntax--operator">+</span>p<span class="syntax--keyword syntax--operator">*</span>digits[j]</span></span>
+<span class=""></span> 
+<span class=""><span class="syntax--source syntax--python">str1<span class="syntax--keyword syntax--operator">=</span><span class="syntax--support syntax--function">str</span>(num<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">1</span>)</span></span>
+<span class=""></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line">#convert integer to array</span></span></span>
+<span class=""><span class="syntax--source syntax--python">arr1<span class="syntax--keyword syntax--operator">=</span>[<span class="syntax--constant syntax--language">None</span>]<span class="syntax--keyword syntax--operator">*</span><span class="syntax--support syntax--function">len</span>(str1)</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> k <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(str1)):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>arr1[k]<span class="syntax--keyword syntax--operator">=</span><span class="syntax--support syntax--function">int</span>(str1[k])</span></span>
+<span class=""></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">return</span>(arr1)</span></span>
+<span class=""></span> </pre>
+<p><a name="88soln"></a>
+<strong>88. Merge Sorted Array</strong></p>
+<p><em>Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.</em></p>
+<blockquote>
+<blockquote>
+<p>nums1 = [1,2,3,0,0,0], m = 3</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>nums2 = [2,5,6],       n = 3</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Output: [1,2,2,3,5,6]</p>
+</blockquote>
+</blockquote>
+<pre class="editor-colors lang-python"><span></span> 
+<span class=""><span class="syntax--source syntax--python">nums1[m:] <span class="syntax--keyword syntax--operator">=</span> nums2[:n]</span></span>
+<span class=""><span class="syntax--source syntax--python">nums1.<span class="syntax--entity syntax--name syntax--function">sort</span>()</span></span>
+<span class=""></span> </pre>
+<p><a name="118soln"></a>
+<strong>118. Pascal’s Triangle</strong></p>
+<p><em>Given a non-negative integer numRows, generate the first numRows of Pascal’s triangle.</em></p>
+<blockquote>
+<blockquote>
+<p>Input: 5
+Output:<br>
+[<br>
+[1],<br>
+[1,1],<br>
+[1,2,1],<br>
+[1,3,3,1],<br>
+[1,4,6,4,1]<br>
+]<br></p>
+</blockquote>
+</blockquote>
+<pre class="editor-colors lang-python"><span></span> 
+<span class=""><span class="syntax--source syntax--python">pascal<span class="syntax--keyword syntax--operator">=</span>[<span class="syntax--constant syntax--language">None</span>]<span class="syntax--keyword syntax--operator">*</span>numRows</span></span>
+<span class=""><span class="syntax--source syntax--python">row<span class="syntax--keyword syntax--operator">=</span>[<span class="syntax--constant syntax--numeric">1</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> i <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(numRows):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>rnum<span class="syntax--keyword syntax--operator">=</span>i<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">2</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>pascal[i] <span class="syntax--keyword syntax--operator">=</span> row</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>prow<span class="syntax--keyword syntax--operator">=</span>row</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row <span class="syntax--keyword syntax--operator">=</span> [<span class="syntax--constant syntax--language">None</span>] <span class="syntax--keyword syntax--operator">*</span> (rnum)</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row[<span class="syntax--constant syntax--numeric">0</span>] <span class="syntax--keyword syntax--operator">=</span> prow[<span class="syntax--constant syntax--numeric">0</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row[<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>] <span class="syntax--keyword syntax--operator">=</span> prow[<span class="syntax--support syntax--function">len</span>(prow)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">if</span>(<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">&gt;</span><span class="syntax--constant syntax--numeric">2</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span>ctr <span class="syntax--keyword syntax--operator">=</span> <span class="syntax--constant syntax--numeric">1</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">2</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>row[ctr]<span class="syntax--keyword syntax--operator">=</span>prow[ctr<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>]<span class="syntax--keyword syntax--operator">+</span>prow[ctr]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>ctr<span class="syntax--keyword syntax--operator">=</span>ctr<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">1</span><span class="trailing-whitespace">        </span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">return</span>(pascal)</span></span>
+<span class=""></span> </pre>
+<p><a name="119soln"></a>
+<strong>119. Pascal’s Triangle II</strong></p>
+<blockquote>
+<blockquote>
+<p>Input: rowIndex = 3</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Output: [1,3,3,1]</p>
+</blockquote>
+</blockquote>
+<pre class="editor-colors lang-python"><span></span> 
+<span class=""><span class="syntax--source syntax--python">numRows<span class="syntax--keyword syntax--operator">=</span>rowIndex<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">1</span></span></span>
+<span class=""><span class="syntax--source syntax--python">pascal<span class="syntax--keyword syntax--operator">=</span>[<span class="syntax--constant syntax--language">None</span>]<span class="syntax--keyword syntax--operator">*</span>numRows</span></span>
+<span class=""><span class="syntax--source syntax--python">row<span class="syntax--keyword syntax--operator">=</span>[<span class="syntax--constant syntax--numeric">1</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">for</span> i <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(numRows):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>rnum<span class="syntax--keyword syntax--operator">=</span>i<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">2</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>pascal[i] <span class="syntax--keyword syntax--operator">=</span> row</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>prow<span class="syntax--keyword syntax--operator">=</span>row</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row <span class="syntax--keyword syntax--operator">=</span> [<span class="syntax--constant syntax--language">None</span>] <span class="syntax--keyword syntax--operator">*</span> (rnum)</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row[<span class="syntax--constant syntax--numeric">0</span>] <span class="syntax--keyword syntax--operator">=</span> prow[<span class="syntax--constant syntax--numeric">0</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span>row[<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>] <span class="syntax--keyword syntax--operator">=</span> prow[<span class="syntax--support syntax--function">len</span>(prow)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">if</span>(<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">&gt;</span><span class="syntax--constant syntax--numeric">2</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span>ctr <span class="syntax--keyword syntax--operator">=</span> <span class="syntax--constant syntax--numeric">1</span></span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">        </span><span class="syntax--keyword syntax--control">for</span> j <span class="syntax--keyword syntax--operator syntax--logical syntax--python">in</span> <span class="syntax--support syntax--function">range</span>(<span class="syntax--support syntax--function">len</span>(row)<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">2</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>row[ctr]<span class="syntax--keyword syntax--operator">=</span>prow[ctr<span class="syntax--keyword syntax--operator">-</span><span class="syntax--constant syntax--numeric">1</span>]<span class="syntax--keyword syntax--operator">+</span>prow[ctr]</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">            </span>ctr<span class="syntax--keyword syntax--operator">=</span>ctr<span class="syntax--keyword syntax--operator">+</span><span class="syntax--constant syntax--numeric">1</span></span></span>
+<span class=""></span> 
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">if</span>(rowIndex<span class="syntax--keyword syntax--operator">==</span><span class="syntax--constant syntax--numeric">0</span>):</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">return</span>([<span class="syntax--constant syntax--numeric">1</span>])</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control">else</span>:</span></span>
+<span class=""><span class="syntax--source syntax--python"><span class="leading-whitespace">    </span><span class="syntax--keyword syntax--control">return</span>(pascal[rowIndex])</span></span></pre>
+
+  </body>
+</html>
